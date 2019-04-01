@@ -1,0 +1,52 @@
+$break-desktop: 1280px;
+$break-tablet: 1024px;
+$break-phone: 469px;
+$break-zero: 0;
+
+@mixin responsive($media) {
+    @if $media == desktop {
+        @media only screen and (min-device-width: $break-desktop) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-device-width: $break-tablet) and (max-width: $break-desktop - 1) { @content; }
+    }
+    @else if $media == phone {
+        @media only screen and (min-device-width: $break-phone) and (max-width: $break-tablet - 1) { @content; }
+    }
+    @else if $media == zero {
+        @media only screen and (min-device-width: $break-zero) and (max-width: $break-phone - 1) { @content; }
+    }
+}
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border: 1px solid $border;
+    svg {
+        fill: $color;
+        .need-stroke {
+            stroke: $color !important;
+        }
+    }
+
+    &:focus, &:hover, &.active {
+        color: $color;
+        background-color: darken($background, 10%);
+    }
+    &:focus, &.active {
+        border-color: darken($border, 25%);
+        outline: none;
+    }
+    &:hover {
+        border-color: darken($border, 12%);
+    }
+    &:disabled {
+        color: rgba(0, 0, 0, .25);
+        background: #f5f5f3;
+        border-color: #ffffff;
+        cursor: default;
+        svg {
+            fill: #ccc;
+        }
+    }
+}
