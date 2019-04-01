@@ -1,0 +1,17 @@
+{
+  "name": "yoganext",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "walborn",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
