@@ -1,9 +1,4 @@
-import Layout from '../../components/Layout'
-
-// const importAll = r => r.keys().reduce((res, i) => ({ ...res, [i.replace('./', '')]: r(i) }), {});
-// const images = importAll(require.context('/static/images/avatar', false, /\.png/));
-
-const masters = [
+export default [
     {
         id: 'nina_keznetsova',
         name: 'Нина Кузнецова',
@@ -45,17 +40,3 @@ const masters = [
         description: 'Более 20-ти лет концертной деятельности (выступлений), многолетний опыт в преподавании танца, одна из основательниц "Лиги профессионалов". Восточные танцы (танец живота) - это грация, пластика, женское здоровье и прекрасное настроение!',
     },
 ];
-export default () => (
-    <Layout>
-        {
-            masters.map(i => (
-                <div className="coach__item">
-                    <div className="coach__avatar"><img src={`/static/images/avatar/${i.name}.png`} alt="my image" /></div>
-                    <div className="coach__name">{i.name}</div>
-                    <div className="coach__description">{i.description}</div>
-                </div>
-            ))
-        }
-    </Layout>
-)
-

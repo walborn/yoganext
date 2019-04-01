@@ -11,14 +11,14 @@ const menu = [
 export default () => (
     <div>
         <Link href="/">
-            Home
+            <a>Home</a>
         </Link>
         <ul>
             {
                 menu.map(i => (
                     <li key={i.key}>
                         <Link href={`/${i.href}`}>
-                            {i.title}
+                            <a>{i.title}</a>
                         </Link>
                     </li>
                 ))

@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout'
-import './styles.scss'
+// import './styles.scss'
 
 export default () => (
     <Layout>
