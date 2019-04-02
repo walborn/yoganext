@@ -1,6 +1,5 @@
 import Layout from '../../components/Layout'
 import Unlimited from '../../components/Unlimited';
-// import './styles.scss'
 
 export default () => (
     <Layout>
