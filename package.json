@@ -5,7 +5,8 @@
   "author": "walborn",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
+    "next": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
@@ -14,8 +15,13 @@
     "express": "^4.16.4",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^4.0.6",
+    "react-yandex-maps": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.1"
   }
 }
