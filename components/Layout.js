@@ -1,9 +1,11 @@
-import Header from './Header'
-
+import Head from './Head'
+import Navigation from './Navigation'
+import React from 'react';
 
 export default props => (
     <div>
-        <Header />
+        <Head />
+        <Navigation />
         {props.children}
     </div>
 )
