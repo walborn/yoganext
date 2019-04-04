@@ -30,11 +30,11 @@ const Menu = ({ className, active, list, children }) => (
     <div className={className}>
         {
             list.map(i => (
-                <div key={i.key} className={`item${active === i.key ? ' active' : ''}`}>
-                    <Link href={`/${i.href}`}>
-                        <a>{i.title}</a>
-                    </Link>
-                </div>
+                <Link href={`/${i.href}`}>
+                    <div key={i.key} className={`item${active === i.key ? ' active' : ''}`}>
+                            <a>{i.title}</a>
+                    </div>
+                </Link>
             ))
         }
         {children}
@@ -49,7 +49,7 @@ class Navigation extends React.Component {
         opened: false,
     };
 
-    handleToggleMenu = (opened) => this.setState({ opened }, () => console.log(123123));
+    handleToggleMenu = (opened) => this.setState({ opened });
 
     render() {
         const { opened } = this.state;
@@ -59,6 +59,9 @@ class Navigation extends React.Component {
                 <Headroom>
                     <div className="top">
                         <div className="row">
+                            <div className="home">
+                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
+                            </div>
                             <div className="location">
                                 <LocationSVG className="image"/>
                                 <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
@@ -85,9 +88,6 @@ class Navigation extends React.Component {
                                 <a href="tel:+79168765413"><PhoneSVG className="image"/>+7 (916) 876-54-13</a>
                                 <a className="whatsapp" href="https://wa.me/79168765413"><WhatsAppSVG/></a>
                                 <a className="viber" href="viber://chat?number=79168765413"><ViberSVG/></a>
-                            </div>
-                            <div className="home">
-                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
                             </div>
                         </div>
                         <MenuSVG className="sandwich" onClick={() => this.handleToggleMenu(true)} />
