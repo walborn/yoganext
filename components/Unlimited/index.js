@@ -1,8 +1,11 @@
 import React  from 'react';
-import CursorSVG from '../static/svg/cursor.svg';
+import CursorSVG from '../../static/svg/cursor.svg';
+import Input from '../Input';
+import Button from '../Button';
+import './styles.scss';
 
 
-export default class Unlimited extends React.PureComponent {
+export default class Index extends React.PureComponent {
     render() {
         const { className } = this.props;
         return (
@@ -17,9 +20,9 @@ export default class Unlimited extends React.PureComponent {
                 </div>
                 <div className="unlimited__form">
                     <div className="unlimited__form__header">Заполните форму, чтобы получить безлимитную неделю</div>
-                    <input type="text" name="name" title="Имя, Фамилия" placeholder="Имя, Фамилия" onChange={this.handleChange} />
-                    <input type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} />
-                    <button type="submit" name="submit">Отправить</button>
+                    <Input type="text" name="name" title="Имя, Фамилия" placeholder="Имя, Фамилия" onChange={this.handleChange} />
+                    <Input type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} />
+                    <Button type="submit" name="submit" orange>Отправить</Button>
                 </div>
             </div>
         );

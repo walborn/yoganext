@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout'
-import Unlimited from '../../components/Unlimited';
+import Index from '../../components/Unlimited/index';
 
 export default () => (
     <Layout>
@@ -15,6 +15,6 @@ export default () => (
         <p><strong>ДЛЯ ДЕТЕЙ</strong> от 5 до 16 лет у нас есть занятия по Джит Кун-до - стилю, основанному Брюс Ли.</p>
 
         <h2>Безлимитная неделя!</h2>
-        <Unlimited/>
+        <Index/>
     </Layout>
 )

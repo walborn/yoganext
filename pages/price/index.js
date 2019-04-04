@@ -1,11 +1,11 @@
 import Layout from '../../components/Layout'
-import Unlimited from '../../components/Unlimited'
+import Index from '../../components/Unlimited/index'
 
 
 export default () => (
     <Layout>
         <h2 className="price__header">Безлимитная неделя</h2>
-        <Unlimited />
+        <Index />
         <h2 className="price__header">Стоимость групповых занятий</h2>
         <section className="price__content">
             <div className="price__card">

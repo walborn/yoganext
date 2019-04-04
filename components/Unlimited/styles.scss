@@ -1,0 +1,50 @@
+@import '../../static/styles/constants.scss';
+
+.unlimited {
+  &__info,
+  &__form {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  &__info {
+    width: 60%;
+    background: rgba($color-gray--lightest, .3);
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+  }
+  &__form {
+    width: 40%;
+    > * {
+      margin-bottom: 10px;
+    }
+    &__header {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      color: $color-orange;
+    }
+  }
+  &__paragraph {
+    position: relative;
+    padding-left: 30px;
+  }
+  &__cursor {
+    position: absolute;
+    left: 0;
+    transform: rotate(90deg);
+    fill: $color-orange;
+    width: 21px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .unlimited {
+    &__info,
+    &__form {
+      display: block;
+      width: 100%;
+    }
+  }
+}
