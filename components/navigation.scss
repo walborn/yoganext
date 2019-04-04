@@ -32,6 +32,9 @@ body {
     box-shadow: 0 0 2px 0 rgba(245, 166, 32, 0.3);
     line-height: 40px;
   }
+  .home {
+    cursor: pointer;
+  }
   .brand {
     position: absolute;
     height: 60%;
@@ -66,9 +69,17 @@ body {
     }
   }
   .menu-bottom {
+    color: $color-gray--light;
     > .item {
       display: inline-block;
       padding: 0 20px;
+      > a {
+        text-decoration: none;
+        color: $color-font--lighten;
+        &:hover {
+          color: $color-font--light;
+        }
+      }
     }
     > .item:hover > a {
       color: $color-orange;
@@ -120,20 +131,27 @@ body {
     padding-left: 20px;
   }
   .location {
-    padding-left: 30px;
+    padding-left: 40px;
     .image {
       width: 16px;
       height: 16px;
+      padding-right: 2px;
+      vertical-align: middle;
       fill: $color-orange;
+    }
+    a {
+      text-decoration: none;
+      color: $color-font--lighten;
+      &:hover {
+        color: $color-font--light;
+      }
     }
   }
   .social {
-    position: absolute;
-    padding: 0;
-    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 0 0 20px;
     line-height: 0;
-    top: 50%;
-    transform: translateY(-50%);
 
     .item {
       display: inline-block;
@@ -210,15 +228,45 @@ body {
     }
   }
   @media only screen and (max-width: 1000px) {
-    .menu-bottom {
+    .location {
       display: none;
+    }
+    .social {
+      padding-left: 45px;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .top {
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.16);
     }
     .menu-right.opened {
       display: block;
       right: $RIGHT_MENU_WIDTH;
     }
+    .menu-bottom {
+      display: none;
+    }
     .sandwich {
       display: block;
+    }
+
+    //.menu-right.opened {
+    //  transform: translate(0);
+    //}
+  }
+  @media only screen and (max-width: 500px) {
+    .social {
+      display: none;
+    }
+    .phone {
+      padding-left: 40px;
+      .image {
+        display: none;
+      }
+      .whatsapp,
+      .viber {
+        padding-left: 5px;
+      }
     }
   }
 }

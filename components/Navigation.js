@@ -59,10 +59,14 @@ class Navigation extends React.Component {
                 <Headroom>
                     <div className="top">
                         <div className="row">
-                            <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
+                            <div className="home">
+                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
+                            </div>
                             <div className="location">
                                 <LocationSVG className="image"/>
-                                м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
+                                <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
+                                    м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
+                                </a>
                             </div>
                             <div className="social">
                                 <div className="item">
