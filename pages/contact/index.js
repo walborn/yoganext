@@ -14,7 +14,7 @@ import FileSVG from '../../static/svg/file.svg';
 
 export default () => (
     <Layout>
-        <h1>КАК НАС НАЙТИ?</h1>
+        <h1>Как нас найти?</h1>
 
         <ul className="contacts__list">
             <li className="contacts__item"><LocationSVG className="contacts__image contacts__image--location" />м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305</li>

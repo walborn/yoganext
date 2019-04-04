@@ -7,6 +7,8 @@ export default props => (
     <div>
         <Head />
         <Navigation />
-        {props.children}
+        <main className="row">
+            {props.children}
+        </main>
     </div>
 )
