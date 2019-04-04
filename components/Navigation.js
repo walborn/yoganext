@@ -59,9 +59,6 @@ class Navigation extends React.Component {
                 <Headroom>
                     <div className="top">
                         <div className="row">
-                            <div className="home">
-                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
-                            </div>
                             <div className="location">
                                 <LocationSVG className="image"/>
                                 <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
@@ -88,6 +85,9 @@ class Navigation extends React.Component {
                                 <a href="tel:+79168765413"><PhoneSVG className="image"/>+7 (916) 876-54-13</a>
                                 <a className="whatsapp" href="https://wa.me/79168765413"><WhatsAppSVG/></a>
                                 <a className="viber" href="viber://chat?number=79168765413"><ViberSVG/></a>
+                            </div>
+                            <div className="home">
+                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
                             </div>
                         </div>
                         <MenuSVG className="sandwich" onClick={() => this.handleToggleMenu(true)} />

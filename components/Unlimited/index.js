@@ -5,11 +5,11 @@ import Button from '../Button';
 import './styles.scss';
 
 
-export default class Index extends React.PureComponent {
+export default class Unlimited extends React.PureComponent {
     render() {
         const { className } = this.props;
         return (
-            <div className={`unlimited ${className}`}>
+            <div className={`unlimited${className ? ` ${className}` : ''}`}>
                 <div className="unlimited__info">
                     <p className="unlimited__paragraph"><CursorSVG className="unlimited__cursor" />Оплатите ₽<strong>900</strong></p>
                     <p className="unlimited__paragraph"><CursorSVG className="unlimited__cursor"/>Сходите на первое занятие</p>

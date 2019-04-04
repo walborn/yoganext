@@ -1,0 +1,227 @@
+@import '../../static/styles/constants.scss';
+
+main {
+  .schedule {
+    &__view-button {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      margin-left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+      }
+    }
+    &__arrow {
+      position: absolute;
+      display: none;
+      width: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: .5;
+      cursor: pointer;
+      &--visible {
+        display: block;
+      }
+      &--next {
+        right: 0;
+      }
+      &--prev {
+        left: 0;
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &__week {
+      position: relative;
+      padding: 20px;
+      text-align: center;
+    }
+    &__header {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      box-shadow: $box-shadow;
+      &__item {
+        display: inline-block;
+        box-sizing: border-box;
+        width: calc(100%/7);
+        padding: 5px 0;
+        font-weight: 600;
+        color: $color-font--light;
+        //border: 1px solid $color-gray--lightest;
+        border-left: 0 none;
+        text-align: center;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        &:first-child {
+          border-left: 1px solid $color-gray--lightest;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        &:last-child {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+        &:hover {
+          background-color: shade($color-background);
+        }
+        &.active {
+          background-color: $color-menu;
+          border: 1px solid lighten($color-orange, 20);
+        }
+      }
+      &__date {
+        font-weight: 900;
+        color: $color-orange;
+      }
+    }
+    &__body {
+      width: 100%;
+      &__item {
+        margin: 10px 0;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: $box-shadow;
+        border-radius: 6px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: $box-shadow--hover;
+        }
+      }
+      &__category {
+        border-radius: 4px;
+        &--ashtanga {
+          background-color: $color-blue;
+        }
+        &--fighting {
+          background-color: $color-red;
+        }
+        &--hatha {
+          background-color: $color-green;
+        }
+      }
+      &__time {
+        font-weight: 700;
+      }
+      &__name {
+        &__coach {
+          font-size: 14px;
+          font-weight: 300;
+          &--locum {
+            color: $color-blue;
+          }
+          &--miss {
+            color: $color-red;
+          }
+        }
+      }
+      &__level {
+      }
+      &__room {
+      }
+    }
+    &__list__wrapper {
+      display: none;
+      &.visible {
+        display: block;
+      }
+    }
+    &__table {
+      border-collapse: collapse;
+      &__wrapper {
+        display: none;
+        width: 100%;
+        margin-bottom: 30px;
+        box-shadow: $box-shadow;
+        box-sizing: border-box;
+        border-radius: 6px;
+        overflow: scroll;
+        &.visible {
+          display: block;
+        }
+      }
+      &__header {
+        padding: 10px;
+      }
+      &__date {
+        font-weight: 900;
+        color: $color-orange;
+      }
+
+      &__row {
+        &:nth-child(2n + 1) {
+          background: rgba($color-gray--lightest, .3);
+        }
+      }
+      &__time-header {
+        text-align: center;
+        width: 50px;
+        svg {
+          fill: $color-orange;
+        }
+      }
+      &__time-cell {
+        color: $color-orange;
+        text-align: center;
+      }
+      &__cell {
+        font-size: 11px;
+        padding: 5px;
+        &__item {
+          margin: 10px 0;
+          padding: 10px;
+          text-align: center;
+          box-sizing: border-box;
+          box-shadow: $box-shadow;
+          border-radius: 6px;
+          cursor: pointer;
+          &:hover {
+            box-shadow: $box-shadow--hover;
+          }
+        }
+        &__category {
+          border-radius: 4px;
+          &--ashtanga {
+            background-color: $color-blue;
+          }
+          &--fighting {
+            background-color: $color-red;
+          }
+          &--hatha {
+            background-color: $color-green;
+          }
+        }
+        &__time {
+          color: $color-orange;
+          //font-weight: 700;
+        }
+        &__name {
+          &__coach {
+            font-weight: 700;
+            //color: $color-orange;
+            &--locum {
+              color: $color-blue;
+            }
+            &--miss {
+              color: $color-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

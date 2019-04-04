@@ -1,0 +1,22 @@
+@import '../../static/styles/constants.scss';
+
+main {
+  .rent {
+    &__sub-header {
+      display: inline-block;
+      font-weight: 700;
+      color: $color-orange;
+    }
+    &__images {
+      padding-top: 20px;
+      font-size: 0;
+      > img {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+}
+

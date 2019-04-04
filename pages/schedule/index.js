@@ -1,10 +1,12 @@
 import React  from 'react';
 import Layout from '../../components/Layout'
+import Button from '../../components/Button';
 import TimeSVG from '../../static/svg/time.svg';
 import ArrowSVG from '../../static/svg/arrow.svg';
 import Cube1SVG from '../../static/svg/cube1.svg';
 import Cube4SVG from '../../static/svg/cube4.svg';
 import list from './db';
+import './styles.scss';
 
 
 const hhmm = minutes => {
@@ -67,23 +69,24 @@ export default class Schedule extends React.Component {
             <Layout>
                 <div className="schedule__week">
                     {getWeek(list[page * 7])}
-                    <button
+                    <Button
                         className="schedule__view-button"
                         onClick={() => this.setState({view: !view})}
-                        children={view ? <Cube1SVG/> : <Cube4SVG/>}
+                        children={view ? <Cube1SVG /> : <Cube4SVG />}
+                        orange
                     />
 
                     <ArrowSVG
-                        className={['schedule__arrow schedule__arrow--prev', hasPrev && 'schedule__arrow--visible']}
+                        className={['schedule__arrow schedule__arrow--prev', hasPrev && 'schedule__arrow--visible'].filter(Boolean).join(' ')}
                         onClick={() => hasPrev && this.setState({page: page - 1})}
                     />
                     <ArrowSVG
-                        className={['schedule__arrow schedule__arrow--next', hasNext && 'schedule__arrow--visible']}
+                        className={['schedule__arrow schedule__arrow--next', hasNext && 'schedule__arrow--visible'].filter(Boolean).join(' ')}
                         onClick={() => hasNext && this.setState({page: page + 1})}
                     />
                 </div>
 
-                <div className={['schedule__table__wrapper', !view && 'visible']}>
+                <div className={['schedule__table__wrapper', !view && 'visible'].filter(Boolean).join(' ')}>
                     <table className="schedule__table">
                         <thead>
                         <th className="schedule__table__time-header"><TimeSVG/></th>
@@ -92,7 +95,7 @@ export default class Schedule extends React.Component {
                                 const date = toDate(i);
                                 return (
                                     <th
-                                        className={['schedule__table__header', index === selected && 'active']}
+                                        className={['schedule__table__header', index === selected && 'active'].filter(Boolean).join(' ')}
                                         key={i.key}
                                         onClick={this.handleClick(index)}
                                     >
@@ -141,14 +144,14 @@ export default class Schedule extends React.Component {
                         </tbody>
                     </table>
                 </div>
-                <div className={['schedule__list__wrapper', view && 'visible']}>
+                <div className={['schedule__list__wrapper', view && 'visible'].filter(Boolean).join(' ')}>
                     <ul className="schedule__header">
                         {
                             list.slice(page * 7, page * 7 + 7).map((i, index) => {
                                 const date = toDate(i);
                                 return (
                                     <li
-                                        className={['schedule__header__item', index === selected && 'active']}
+                                        className={['schedule__header__item', index === selected && 'active'].filter(Boolean).join(' ')}
                                         key={i.key}
                                         onClick={this.handleClick(index)}
                                     >

@@ -1,0 +1,98 @@
+@import '../../static/styles/constants.scss';
+
+
+#application > main {
+  .contacts {
+    padding-right: 0;
+    &__map {
+      margin-bottom: 20px;
+      box-shadow: $box-shadow;
+      border-radius: 6px;
+    }
+    &__list {
+      list-style: none;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: $box-shadow;
+      border-radius: 6px;
+    }
+    &__item {
+      position: relative;
+      padding-left: 35px;
+      line-height: 30px;
+      > a {
+        text-decoration: none;
+        color: $color-blue;
+        &:hover {
+          color: darken($color-blue, 20);
+          svg {
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+    &__image {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      fill-opacity: .85;
+      &--whatsapp {
+        left: auto;
+        padding-left: 10px;
+        svg {
+          fill: #25d366;
+        }
+      }
+      &--viber {
+        left: auto;
+        padding-left: 40px;
+        svg {
+          fill: #8f5db7;
+        }
+      }
+      &--location {
+        fill: $color-red;
+      }
+      &--phone {
+        fill: #4285f4;
+      }
+      &--email {
+        fill: #dd4b39;
+      }
+      &--vk {
+        fill: #45668e;
+      }
+      &--insta {
+        fill: #c13584;
+      }
+      &--fb {
+        fill: #3b5998;
+      }
+      &--file {
+        fill: #34a853;
+      }
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .contacts {
+      box-shadow: $box-shadow;
+      border-radius: 6px;
+      &__list,
+      &__map {
+        display: inline-block;
+        margin: 0;
+        box-shadow: none;
+        min-height: 350px;
+        vertical-align: top;
+      }
+      &__list {
+        width: 40%;
+      }
+      &__map {
+        width: 60%;
+      }
+    }
+  }
+}
