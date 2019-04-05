@@ -3,9 +3,22 @@ import CursorSVG from '../../static/svg/cursor.svg';
 import Input from '../Input';
 import Button from '../Button';
 import './styles.scss';
+import fetch from 'isomorphic-unfetch';
 
 
 export default class Unlimited extends React.PureComponent {
+    // handleSubmit = () => {
+    //     fetch('/bear', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({ hungry: true })
+    //     }).then( r => {
+    //         open(r.headers.get('location'));
+    //         return r.json();
+    //     })
+    // }
     render() {
         const { className } = this.props;
         return (
@@ -28,3 +41,21 @@ export default class Unlimited extends React.PureComponent {
         );
     }
 }
+
+// Unlimited.getInitialProps = async function() {
+//     const res = await fetch('http://0.0.0.0:9000/events');
+//     const events = await res.json();
+//     const list = events.reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
+//     const dates = Object.keys(list);
+//     const minDate = dates.slice(1).reduce((min, next) => {
+//         if (min.slice(6) < next.slice(6)) return min;
+//         if (min.slice(6) > next.slice(6)) return next;
+//         if (min.slice(3, 5) < next.slice(3, 5)) return min;
+//         if (min.slice(3, 5) > next.slice(3, 5)) return next;
+//         if (min.slice(0, 2) < next.slice(0, 2)) return min;
+//         if (min.slice(0, 2) > next.slice(0, 2)) return next;
+//         return min;
+//     }, dates[0]);
+//
+//     return { list, minDate };
+// };

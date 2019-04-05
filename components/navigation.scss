@@ -24,6 +24,7 @@ body {
 
 
 #navigation {
+  max-height: 80px;
   .top {
     background: $color-background;
     line-height: 50px;
@@ -101,7 +102,7 @@ body {
     right: 0;
     z-index: $MAX_INT;
     background: $color-background;
-    box-shadow: $box-shadow;
+    box-shadow: -6px 0 6px -6px #e7eaf3;
     .item {
       display: block;
       padding: 15px 20px;

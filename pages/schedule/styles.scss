@@ -140,6 +140,7 @@ main {
     }
     &__table {
       border-collapse: collapse;
+      min-width: 100%;
       &__wrapper {
         display: none;
         width: 100%;
