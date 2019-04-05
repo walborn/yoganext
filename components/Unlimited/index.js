@@ -6,21 +6,28 @@ import './styles.scss';
 import fetch from 'isomorphic-unfetch';
 
 
-export default class Unlimited extends React.PureComponent {
-    // handleSubmit = () => {
-    //     fetch('/bear', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({ hungry: true })
-    //     }).then( r => {
-    //         open(r.headers.get('location'));
-    //         return r.json();
-    //     })
-    // }
+export default class Unlimited extends React.Component {
+    state = {
+        name: undefined,
+        phone: undefined,
+    };
+    handleSubmit = async () => {
+        const { name, phone } = this.state;
+        const res = await fetch('http://0.0.0.0:9000/feedbacks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, phone, type: 'unlimited week', content: 'I wan\'t unlimited week'  })
+        });
+
+        this.setState({ name: undefined, phone: undefined });
+        this.$name.value = '';
+        this.$phone.value = '';
+        alert('Вы успешно записались на акцию "Безлимитная неделя". В скором времени мы с Вами свяжемся для подтверждения участия!')
+    };
+    handleChange = ({ name, value }) => this.setState({ [name]: value });
     render() {
         const { className } = this.props;
+        const { name, phone } = this.state;
         return (
             <div className={`unlimited${className ? ` ${className}` : ''}`}>
                 <div className="unlimited__info">
@@ -33,29 +40,19 @@ export default class Unlimited extends React.PureComponent {
                 </div>
                 <div className="unlimited__form">
                     <div className="unlimited__form__header">Заполните форму, чтобы получить безлимитную неделю</div>
-                    <Input type="text" name="name" title="Имя, Фамилия" placeholder="Имя, Фамилия" onChange={this.handleChange} />
-                    <Input type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} />
-                    <Button type="submit" name="submit" orange>Отправить</Button>
+                    <Input ref={r => this.$name = r} type="text" name="name" title="Имя, Фамилия" placeholder="Имя, Фамилия" onChange={this.handleChange} />
+                    <Input ref={r => this.$phone = r} type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} />
+                    <Button
+                        type="submit"
+                        name="submit"
+                        orange
+                        onClick={this.handleSubmit}
+                        disabled={!name || !phone}
+                    >
+                        Отправить
+                    </Button>
                 </div>
             </div>
         );
     }
 }
-
-// Unlimited.getInitialProps = async function() {
-//     const res = await fetch('http://0.0.0.0:9000/events');
-//     const events = await res.json();
-//     const list = events.reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
-//     const dates = Object.keys(list);
-//     const minDate = dates.slice(1).reduce((min, next) => {
-//         if (min.slice(6) < next.slice(6)) return min;
-//         if (min.slice(6) > next.slice(6)) return next;
-//         if (min.slice(3, 5) < next.slice(3, 5)) return min;
-//         if (min.slice(3, 5) > next.slice(3, 5)) return next;
-//         if (min.slice(0, 2) < next.slice(0, 2)) return min;
-//         if (min.slice(0, 2) > next.slice(0, 2)) return next;
-//         return min;
-//     }, dates[0]);
-//
-//     return { list, minDate };
-// };
