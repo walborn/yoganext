@@ -5,8 +5,7 @@
   "author": "walborn",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "serve": "node server.js",
+    "dev": "node server.js",
     "build": "next build",
     "now-build": "next build",
     "start": "NODE_ENV=production node server.js"

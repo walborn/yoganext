@@ -76,20 +76,16 @@ body {
     > .item {
       display: inline-block;
       padding: 0 20px;
-      > a {
-        text-decoration: none;
-        color: $color-font--lighten;
-        &:hover {
-          color: $color-font--light;
-        }
+      cursor: pointer;
+      text-decoration: none;
+      color: $color-font--lighten;
+      &:hover {
+        color: $color-orange;
       }
-    }
-    > .item:hover > a {
-      color: $color-orange;
-    }
-    > .item.active > a {
-      color: $color-orange;
-      font-weight: bold;
+      &.active {
+        color: $color-orange;
+        font-weight: bold;
+      }
     }
   }
   .menu-right {
@@ -107,23 +103,17 @@ body {
     background: $color-background;
     box-shadow: $box-shadow;
     .item {
+      display: block;
       padding: 15px 20px;
-      width: 100%;
       border-top: 1px solid $color-border;
-      a {
-        text-decoration: none;
-        color: $color-font--light;
-      }
+      text-decoration: none;
+      color: $color-font--light;
       &.active {
-        a {
-          color: $color-orange;
-          font-weight: bold;
-        }
+        color: $color-orange;
+        font-weight: bold;
       }
       &:hover {
-        a {
-          color: $color-orange;
-        }
+        color: $color-orange;
       }
     }
   }

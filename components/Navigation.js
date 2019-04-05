@@ -31,9 +31,7 @@ const Menu = ({ className, active, list, children }) => (
         {
             list.map(i => (
                 <Link href={`/${i.href}`}>
-                    <div key={i.key} className={`item${active === i.key ? ' active' : ''}`}>
-                            <a>{i.title}</a>
-                    </div>
+                    <a key={i.key} className={`item${active === i.key ? ' active' : ''}`}>{i.title}</a>
                 </Link>
             ))
         }
@@ -60,7 +58,7 @@ class Navigation extends React.Component {
                     <div className="top">
                         <div className="row">
                             <div className="home">
-                                <Link href="/"><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></Link>
+                                <Link href="/"><a><img className={`brand${active === '' ? ' active' : ''}`} src="/static/images/logoOrange.png"/></a></Link>
                             </div>
                             <div className="location">
                                 <LocationSVG className="image"/>

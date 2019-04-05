@@ -15,7 +15,7 @@ import './styles.scss';
 export default () => (
     <footer id="footer">
         <div className="footer row">
-            <Link href="/"><div className="logo"><img src="/static/images/logoOrange.png" /></div></Link>
+            <Link href="/"><a className="logo"><img src="/static/images/logoOrange.png" /></a></Link>
             <ul className="social">
                 <li className="social__item"><a href="https://vk.com/yoga.altufyevo" target="_blank"><VkSVG className="social__image social__image--vk" /></a></li>
                 <li className="social__item"><a href="https://www.instagram.com/yogaclub_om_moscow/" target="_blank"><InstaSVG className="social__image social__image--insta" /></a></li>

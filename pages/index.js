@@ -1,6 +1,5 @@
-import Layout from '../../components/Layout'
-import Unlimited from '../../components/Unlimited/index';
-import './styles.scss';
+import Layout from '../components/Layout'
+import Unlimited from '../components/Unlimited/index';
 
 export default () => (
     <Layout>
@@ -19,5 +18,20 @@ export default () => (
             <h2>Безлимитная неделя!</h2>
             <Unlimited />
         </div>
+        <style jsx>
+            {
+`.home:before {
+    content: '';
+    position:absolute;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.03;
+    background: url(/static/images/logo.png) no-repeat 50% 50%;
+    background-size: cover;
+}`
+            }
+        </style>
     </Layout>
 )
