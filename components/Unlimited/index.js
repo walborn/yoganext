@@ -13,7 +13,7 @@ export default class Unlimited extends React.Component {
     };
     handleSubmit = async () => {
         const { name, phone } = this.state;
-        const res = await fetch('http://0.0.0.0:9000/feedbacks', {
+        const res = await fetch('https://om-rest.herokuapp.com/feedbacks', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone, type: 'unlimited week', content: 'I wan\'t unlimited week'  })

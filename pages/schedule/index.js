@@ -13,7 +13,7 @@ const WEEKDAYS = [ 'sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat' ];
 const MONTH = [ 'Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря' ];
 
 const hhmm = minutes => {
-    const mm = minutes %60;
+    const mm = minutes % 60;
     return `${`0${(minutes - mm)/60}`.slice(-2)}:${`0${mm}`.slice(-2)}`
 };
 
@@ -29,7 +29,7 @@ const getWeek = (minDate, page) => {
     return { days, title };
 };
 
-const Coach = ({ className, miss, locum, coach }) => {
+const Master = ({ className, miss, locum, coach }) => {
     if (miss) return <div className={`${className} ${className}--miss`}>Отмена</div>;
     if (locum) return <div className={`${className} ${className}--locum`}><span style={{ color: '#b2bbc6' }}>{coach}</span> → {locum}</div>;
     if (coach) return <div className={className}>{coach}</div>;
@@ -119,10 +119,10 @@ export default class Schedule extends React.Component {
                                                         row[i] && row[i].map(card => (
                                                             <div key={card.id} className="schedule__table__cell__item">
                                                                 <div className={`schedule__table__cell__category schedule__table__cell__category--${card.category}`}/>
-                                                                <div className="schedule__table__cell__time">{hhmm(card.time)} - {hhmm(card.time + card.duration)}</div>
+                                                                <div className="schedule__table__cell__time">{hhmm(+card.time)} - {hhmm(+card.time + +card.duration)}</div>
                                                                 <div className="schedule__table__cell__name">
                                                                     <div className="schedule__table__cell__name__subject">{card.name}</div>
-                                                                    <Coach
+                                                                    <Master
                                                                         className="schedule__table__cell__name__coach"
                                                                         miss={card.disabled === 'true'}
                                                                         locum={card.alternate}
@@ -164,10 +164,10 @@ export default class Schedule extends React.Component {
                                 list[selected] && list[selected].map(i => (
                                     <div key={i.id} className="schedule__body__item">
                                         <div className={`schedule__body__category schedule__body__category--${i.category}`}/>
-                                        <div className="schedule__body__time">{hhmm(i.time)} - {hhmm(i.time + i.duration)}</div>
+                                        <div className="schedule__body__time">{hhmm(+i.time)} - {hhmm(+i.time + +i.duration)}</div>
                                         <div className="schedule__body__name">
                                             <div className="schedule__body__name__subject">{i.name}</div>
-                                            <Coach className="schedule__body__name__coach" miss={i.disabled === 'true'} locum={i.alternate}
+                                            <Master className="schedule__body__name__coach" miss={i.disabled === 'true'} locum={i.alternate}
                                                    coach={i.master}/>
                                         </div>
                                         <div className="schedule__body__level">{i.level}</div>
@@ -183,7 +183,7 @@ export default class Schedule extends React.Component {
 }
 
 Schedule.getInitialProps = async function() {
-    const res = await fetch('http://0.0.0.0:9000/events');
+    const res = await fetch('https://om-rest.herokuapp.com/events');
     const events = await res.json();
     const list = events.reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
     const dates = Object.keys(list);
