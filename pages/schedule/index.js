@@ -76,6 +76,7 @@ export default class Schedule extends React.Component {
         const { selected, page, pages, minDate, view } = this.state;
         const hasPrev = page;
         const hasNext = pages > page + 1;
+        console.log(list);
 
         const table = Object.keys(list).reduce((res, date) => {
             const day = WEEKDAYS[toDate(date).getDay()];
@@ -209,10 +210,14 @@ export default class Schedule extends React.Component {
     }
 }
 
+
 Schedule.getInitialProps = async function() {
     const res = await fetch('https://om-rest.herokuapp.com/events');
     const events = await res.json();
-    const list = events.filter(i => i.disabled === 'false').reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
+    const list = events
+        .filter(i => i.disabled === 'false')
+        .reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
+
     if (!Object.keys(list).length) return { list: {}, minDate: new Date().toLocaleDateString('ru'), maxDate: new Date().toLocaleDateString('ru') };
     const dates = Object.keys(list);
     const [ minDate, maxDate ] = dates.slice(1).reduce(([ min, max ], next) => {
@@ -223,5 +228,15 @@ Schedule.getInitialProps = async function() {
         if (c > b) return [ min, next ];
         return [ min, max ];
     }, [ dates[0], dates[0] ]);
+
+    const compare = (a, b) => {
+        if (+a.time < +b.time) return -1;
+        if (+a.time > +b.time) return 1;
+        if (+a.duration < +b.duration) return -1;
+        if (+a.duration > +b.duration) return 1;
+        return 0;
+    };
+
+    dates.forEach(date => list[date] = list[date].sort(compare));
     return { list, minDate, maxDate };
 };

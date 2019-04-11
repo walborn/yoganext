@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const defaultDescription = 'Yoga Club OM';
 const defaultOGURL = '';
-const defaultOGTitle = '';
+const defaultOGTitle = 'OM Yoga Club';
 const defaultOGImage = '/static/favicon.png';
 
 const Head = props => (
