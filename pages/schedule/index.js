@@ -40,15 +40,14 @@ export default class Schedule extends React.Component {
         page: 0,
         view: true,
     };
-
-    componentDidMount() {
-        window.scrollTo(0, 0);
-    }
     componentWillMount() {
         const minDate = toDate(this.props.minDate);
         const maxDate = toDate(this.props.maxDate);
         const pages = ((minDate.getDay() - 1) + (maxDate - minDate) / 86400000) / 7;
         this.setState({ minDate, maxDate, pages })
+    }
+    componentDidMount() {
+        window.scrollTo(0, 0);
     }
 
     handleClick = selected => {
@@ -208,7 +207,8 @@ export default class Schedule extends React.Component {
 Schedule.getInitialProps = async function() {
     const res = await fetch('https://om-rest.herokuapp.com/events');
     const events = await res.json();
-    const list = events.reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
+    const list = events.filter(i => i.disabled === 'false').reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
+    if (!Object.keys(list).length) return { list: {}, minDate: new Date().toLocaleDateString('ru'), maxDate: new Date().toLocaleDateString('ru') };
     const dates = Object.keys(list);
     const [ minDate, maxDate ] = dates.slice(1).reduce(([ min, max ], next) => {
         const a = +(min.slice(6) + min.slice(3,5) + min.slice(0,2));
