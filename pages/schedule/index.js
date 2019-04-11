@@ -24,7 +24,7 @@ const getWeek = (minDate, page) => {
     const week = WEEKDAYS.reduce((res, day, index) => ({ ...res, [day]: new Date(monday + (index + 6) % 7  * 86400000) }), {});
     const { mon, sun } = week;
     const title = `${mon.getDate()} ${MONTH[mon.getMonth()]} - ${sun.getDate()} ${MONTH[sun.getMonth()]}`;
-    const days = (x => [ ...x.slice(1), x[0] ])(WEEKDAYS.map((day, index) => ({ day: WEEKDAYS_RUS[index], date: week[day] })));
+    const days = (x => [ ...x.slice(1), x[0] ])(WEEKDAYS.map((day, index) => ({ day, date: week[day], rusDay: WEEKDAYS_RUS[index] })));
     return { days, title };
 };
 
@@ -76,7 +76,6 @@ export default class Schedule extends React.Component {
         const { selected, page, pages, minDate, view } = this.state;
         const hasPrev = page;
         const hasNext = pages > page + 1;
-        console.log(list);
 
         const table = Object.keys(list).reduce((res, date) => {
             const day = WEEKDAYS[toDate(date).getDay()];
@@ -124,7 +123,7 @@ export default class Schedule extends React.Component {
                                                 key={wd.date}
                                                 onClick={() => this.handleClick(wd.date.toLocaleDateString('ru'))}
                                             >
-                                                <div className="schedule__table__day">{wd.day}</div>
+                                                <div className="schedule__table__day">{wd.rusDay}</div>
                                                 <div className="schedule__table__date">{wd.date.getDate()}</div>
                                             </td>
                                         ))
@@ -137,10 +136,10 @@ export default class Schedule extends React.Component {
                                     <tr className="schedule__table__row" key={index}>
                                         <td className="schedule__table__time-cell">{index}</td>
                                         {
-                                            WEEKDAYS.map(i => (
-                                                <td className="schedule__table__cell" key={i}>
+                                            week.days.map(({ day }) => (
+                                                <td className="schedule__table__cell" key={day}>
                                                     {
-                                                        row[i] && row[i].map(card => (
+                                                        row[day] && row[day].map(card => (
                                                             <div key={card.id} className="schedule__table__cell__item">
                                                                 <div className={`schedule__table__cell__category schedule__table__cell__category--${card.category}`}/>
                                                                 <div className="schedule__table__cell__time">{hhmm(+card.time)} - {hhmm(+card.time + +card.duration)}</div>
@@ -177,7 +176,7 @@ export default class Schedule extends React.Component {
                                         onClick={() => this.handleClick(wd.date.toLocaleDateString('ru'))}
                                     >
                                         <div
-                                            className="schedule__header__day">{wd.day}</div>
+                                            className="schedule__header__day">{wd.rusDay}</div>
                                         <div className="schedule__header__date">{wd.date.getDate()}</div>
                                     </li>
                                 ))
