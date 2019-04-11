@@ -20,8 +20,7 @@ const hhmm = minutes => {
 const toDate = x => new Date(...(([ d, m, y ]) => [ +y, +m-1, +d ])(x.split('.')));
 
 const getWeek = (minDate, page) => {
-    const date = toDate(minDate);
-    const monday = date.getTime() - (date.getDay() - 1 + 7 * page) * 86400000;
+    const monday = minDate.getTime() - (minDate.getDay() - 1 - 7 * page) * 86400000;
     const week = WEEKDAYS.reduce((res, day, index) => ({ ...res, [day]: new Date(monday + (index + 6) % 7  * 86400000) }), {});
     const { mon, sun } = week;
     const title = `${mon.getDate()} ${MONTH[mon.getMonth()]} - ${sun.getDate()} ${MONTH[sun.getMonth()]}`;
@@ -45,16 +44,38 @@ export default class Schedule extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0);
     }
+    componentWillMount() {
+        const minDate = toDate(this.props.minDate);
+        const maxDate = toDate(this.props.maxDate);
+        const pages = ((minDate.getDay() - 1) + (maxDate - minDate) / 86400000) / 7;
+        this.setState({ minDate, maxDate, pages })
+    }
 
     handleClick = selected => {
-        this.setState({selected});
+        this.setState({ selected });
+    };
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.minDate !== this.props.minDate || nextProps.maxDate !== this.props.maxDate) {
+            const minDate = toDate(nextProps.minDate);
+            const maxDate = toDate(nextProps.maxDate);
+            const pages = ((minDate.getDay() - 1) + (maxDate - minDate) / 86400000) / 7;
+            this.setState({ minDate, maxDate, pages })
+        }
+    }
+
+    handlePage = (delta) => {
+        const { page } = this.state;
+        const selected = new Date(toDate(this.state.selected).getTime() + 7 * 86400000 * delta).toLocaleDateString('ru');
+
+        this.setState({ page: page + delta, selected });
     };
 
     render() {
-        const { list, minDate } = this.props;
-        const { selected, page, view } = this.state;
+        const { list } = this.props;
+        const { selected, page, pages, minDate, view } = this.state;
         const hasPrev = page;
-        const hasNext = list.length > (page + 1) * 7;
+        const hasNext = pages > page + 1;
 
         const table = Object.keys(list).reduce((res, date) => {
             const day = WEEKDAYS[toDate(date).getDay()];
@@ -82,11 +103,11 @@ export default class Schedule extends React.Component {
                         />
                         <ArrowSVG
                             className={['schedule__arrow schedule__arrow--prev', hasPrev && 'schedule__arrow--visible'].filter(Boolean).join(' ')}
-                            onClick={() => hasPrev && this.setState({page: page - 1})}
+                            onClick={() => hasPrev && this.handlePage(-1)}
                         />
                         <ArrowSVG
                             className={['schedule__arrow schedule__arrow--next', hasNext && 'schedule__arrow--visible'].filter(Boolean).join(' ')}
-                            onClick={() => hasNext && this.setState({page: page + 1})}
+                            onClick={() => hasNext && this.handlePage(+1)}
                         />
                     </div>
 
@@ -187,15 +208,13 @@ Schedule.getInitialProps = async function() {
     const events = await res.json();
     const list = events.reduce((res, item) => ({...res, [item.date]: [...(res[item.date] || []), item]}), {});
     const dates = Object.keys(list);
-    const minDate = dates.slice(1).reduce((min, next) => {
-        if (min.slice(6) < next.slice(6)) return min;
-        if (min.slice(6) > next.slice(6)) return next;
-        if (min.slice(3, 5) < next.slice(3, 5)) return min;
-        if (min.slice(3, 5) > next.slice(3, 5)) return next;
-        if (min.slice(0, 2) < next.slice(0, 2)) return min;
-        if (min.slice(0, 2) > next.slice(0, 2)) return next;
-        return min;
-    }, dates[0]);
-
-    return { list, minDate };
+    const [ minDate, maxDate ] = dates.slice(1).reduce(([ min, max ], next) => {
+        const a = +(min.slice(6) + min.slice(3,5) + min.slice(0,2));
+        const b = +(max.slice(6) + max.slice(3,5) + max.slice(0,2));
+        const c = +(next.slice(6) + next.slice(3,5) + next.slice(0,2));
+        if (c < a) return [ next, max ];
+        if (c > b) return [ min, next ];
+        return [ min, max ];
+    }, [ dates[0], dates[0] ]);
+    return { list, minDate, maxDate };
 };
