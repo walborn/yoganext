@@ -28,10 +28,11 @@ const getWeek = (minDate, page) => {
     return { days, title };
 };
 
-const Master = ({ className, miss, locum, coach }) => {
+const Master = ({ className, miss, alternate, master }) => {
     if (miss) return <div className={`${className} ${className}--miss`}>Отмена</div>;
-    if (locum) return <div className={`${className} ${className}--locum`}><span style={{ color: '#b2bbc6' }}>{coach}</span> → {locum}</div>;
-    if (coach) return <div className={className}>{coach}</div>;
+    if (alternate) return <div className={`${className} ${className}--locum`}><span style={{ color: '#b2bbc6' }}>{master}</span> → {alternate}</div>;
+    if (master) return <div className={className}>{master}</div>;
+    return <div className={className}><span style={{ color: '#b2bbc6' }}>Не назначен</span></div>;
 };
 
 export default class Schedule extends React.Component {
@@ -147,8 +148,8 @@ export default class Schedule extends React.Component {
                                                                     <Master
                                                                         className="schedule__table__cell__name__coach"
                                                                         miss={card.disabled === 'true'}
-                                                                        locum={card.alternate}
-                                                                        coach={card.master}
+                                                                        alternate={card.alternate}
+                                                                        master={card.master}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -189,8 +190,12 @@ export default class Schedule extends React.Component {
                                         <div className="schedule__body__time">{hhmm(+i.time)} - {hhmm(+i.time + +i.duration)}</div>
                                         <div className="schedule__body__name">
                                             <div className="schedule__body__name__subject">{i.name}</div>
-                                            <Master className="schedule__body__name__coach" miss={i.disabled === 'true'} locum={i.alternate}
-                                                   coach={i.master}/>
+                                            <Master
+                                                className="schedule__body__name__coach"
+                                                miss={i.disabled === 'true'}
+                                                alternate={i.alternate}
+                                                master={i.master}
+                                            />
                                         </div>
                                         <div className="schedule__body__level">{i.level}</div>
                                     </div>
