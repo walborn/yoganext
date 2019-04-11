@@ -94,9 +94,9 @@ class Navigation extends React.Component {
                         <Menu className="row menu-bottom" active={active} list={navigation} />
                     </div>
                 </Headroom>
-                {/*<Menu className={`menu-right${opened ? ' opened' : ''}`} active={active} list={navigation}>*/}
-                    {/*<CloseSVG className="close" onClick={() => this.handleToggleMenu(false)} />*/}
-                {/*</Menu>*/}
+                <Menu className={`menu-right${opened ? ' opened' : ''}`} active={active} list={navigation}>
+                    <CloseSVG className="close" onClick={() => this.handleToggleMenu(false)} />
+                </Menu>
             </div>
         );
     }
