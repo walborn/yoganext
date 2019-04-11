@@ -114,28 +114,30 @@ export default class Schedule extends React.Component {
                     <div className={['schedule__table__wrapper', !view && 'visible'].filter(Boolean).join(' ')}>
                         <table className="schedule__table">
                             <thead>
-                            <th className="schedule__table__time-header"><TimeSVG/></th>
-                            {
-                                week.days.map(wd => (
-                                    <th
-                                        className={['schedule__table__header', wd.date.toLocaleDateString('ru') === selected && 'active'].filter(Boolean).join(' ')}
-                                        key={wd.date}
-                                        onClick={() => this.handleClick(wd.date.toLocaleDateString('ru'))}
-                                    >
-                                        <div className="schedule__table__day">{wd.day}</div>
-                                        <div className="schedule__table__date">{wd.date.getDate()}</div>
-                                    </th>
-                                ))
-                            }
+                                <tr>
+                                    <td className="schedule__table__time-header"><TimeSVG/></td>
+                                    {
+                                        week.days.map(wd => (
+                                            <td
+                                                className={['schedule__table__header', wd.date.toLocaleDateString('ru') === selected && 'active'].filter(Boolean).join(' ')}
+                                                key={wd.date}
+                                                onClick={() => this.handleClick(wd.date.toLocaleDateString('ru'))}
+                                            >
+                                                <div className="schedule__table__day">{wd.day}</div>
+                                                <div className="schedule__table__date">{wd.date.getDate()}</div>
+                                            </td>
+                                        ))
+                                    }
+                                </tr>
                             </thead>
                             <tbody>
                             {
                                 table.map((row, index) => (
-                                    <tr className="schedule__table__row">
+                                    <tr className="schedule__table__row" key={index}>
                                         <td className="schedule__table__time-cell">{index}</td>
                                         {
                                             WEEKDAYS.map(i => (
-                                                <td className="schedule__table__cell">
+                                                <td className="schedule__table__cell" key={i}>
                                                     {
                                                         row[i] && row[i].map(card => (
                                                             <div key={card.id} className="schedule__table__cell__item">

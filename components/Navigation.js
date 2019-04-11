@@ -30,7 +30,7 @@ const Menu = ({ className, active, list, children }) => (
     <div className={className}>
         {
             list.map(i => (
-                <Link href={`/${i.href}`}>
+                <Link href={`/${i.href}`} key={i.key}>
                     <a key={i.key} className={`item${active === i.key ? ' active' : ''}`}>{i.title}</a>
                 </Link>
             ))
