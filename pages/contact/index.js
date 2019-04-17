@@ -71,9 +71,9 @@ export default class Contacts extends React.PureComponent {
                                     }}
                                     options={{
                                         iconLayout: 'default#image',
-                                        iconImageHref: '/static/images/placemark.png',
-                                        iconImageSize: [30, 30],
-                                        iconImageOffset: [-15, -15]
+                                        iconImageHref: '/static/svg/placemark.svg',
+                                        iconImageSize: [64, 64],
+                                        iconImageOffset: [-32, -64]
                                     }}
                                 />
                             </Map>

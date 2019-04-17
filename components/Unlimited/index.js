@@ -31,15 +31,13 @@ export default class Unlimited extends React.Component {
         return (
             <div className={`unlimited${className ? ` ${className}` : ''}`}>
                 <div className="unlimited__info">
-                    <p className="unlimited__paragraph"><CursorSVG className="unlimited__cursor" />Оплатите ₽<strong>900</strong></p>
-                    <p className="unlimited__paragraph"><CursorSVG className="unlimited__cursor"/>Сходите на первое занятие</p>
-                    <p className="unlimited__paragraph"><CursorSVG className="unlimited__cursor" />Оставьте честный отзыв в любом удобном сервисе (google карты, яндекс карты, facebook)</p>
-                    <p>* Акция актуальна, если вы у нас впервые</p>
-                    <p>* Действует на все регулярные групповые занятия</p>
-                    <p>* Успейте воспользоваться акцией до <strong>30</strong> апреля</p>
+                    <div className="unlimited__paragraph">Стоимость ₽ <strong>900</strong></div>
+                    <div className="unlimited__paragraph">Акция актуальна, если вы у нас впервые</div>
+                    <div className="unlimited__paragraph">Действует на все регулярные групповые занятия</div>
+                    <div className="unlimited__paragraph">Мы будем благодарны за любой честный отзыв в удобном для вас сервисе (google карты, яндекс карты, facebook)</div>
                 </div>
                 <div className="unlimited__form">
-                    <div className="unlimited__form__header">Заполните форму, чтобы получить безлимитную неделю</div>
+                    {/*<div className="unlimited__form__header">Заявка на участие</div>*/}
                     <Input ref={r => this.$name = r} type="text" name="name" title="Имя, Фамилия" placeholder="Имя, Фамилия" onChange={this.handleChange} />
                     <Input ref={r => this.$phone = r} type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} />
                     <Button
@@ -49,7 +47,7 @@ export default class Unlimited extends React.Component {
                         onClick={this.handleSubmit}
                         disabled={!name || !phone}
                     >
-                        Отправить
+                        Участвовать
                     </Button>
                 </div>
             </div>
