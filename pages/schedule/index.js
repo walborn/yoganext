@@ -18,8 +18,8 @@ export default class Schedule extends React.Component {
         return <div className={`${className} ${className}--blank`}>Не назначен</div>;
     };
     state = {
-        day: new Date().getDate(),
-        view: false,
+        day: new Date().getDay(),
+        view: true,
     };
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -88,7 +88,15 @@ export default class Schedule extends React.Component {
                                     <tr>
                                         <td className='schedule__table__time-header'><TimeSVG/></td>
                                         {
-                                            WEEKDAYS.map(wd => (<td key={wd}>{weekdays.ru[wd]}</td>))
+                                            WEEKDAYS.map((wd, index) => (
+                                                <td
+                                                    key={wd}
+                                                    onClick={() => this.setState({ day: index })}
+                                                    className={[ 't-item', index === day && 'active' ].filter(Boolean).join(' ')}
+                                                >
+                                                    {weekdays.ru[wd]}
+                                                </td>
+                                            ))
                                         }
                                     </tr>
                                     </thead>
@@ -98,10 +106,10 @@ export default class Schedule extends React.Component {
                                             <tr className='schedule__table__row' key={index}>
                                                 <td className='schedule__table__time-cell'>{index}</td>
                                                 {
-                                                    WEEKDAYS.map((_, day) => (
-                                                        <td className='schedule__table__cell' key={day}>
+                                                    WEEKDAYS.map((_, d) => (
+                                                        <td className="schedule__table__cell" key={d}>
                                                             {
-                                                                row[day] && row[day].map(card => (
+                                                                row[d] && row[d].map(card => (
                                                                     <div key={card.id}
                                                                          className='schedule__table__cell__item'>
                                                                         <div className={`schedule__table__cell__category schedule__table__cell__category--${card.category}`}/>
