@@ -11,12 +11,12 @@ app
     .then(() => {
         const server = express();
 
-        server.get('/master/list', (req, res) => handle(req, res));
-        server.get('/master/:id', (req, res) => {
-            const actualPage = '/master/item';
-            const queryParams = { title: req.params.id };
-            app.render(req, res, actualPage, queryParams);
-        });
+        // server.get('/master/list', (req, res) => handle(req, res));
+        // server.get('/master/:id', (req, res) => {
+        //     const actualPage = '/master/item';
+        //     const queryParams = { title: req.params.id };
+        //     app.render(req, res, actualPage, queryParams);
+        // });
 
         server.get('*', (req, res) => handle(req, res));
 
