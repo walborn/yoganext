@@ -22,7 +22,7 @@ const navigation = [
     { key: 'home', href: '', title: 'Главная' },
     { key: 'schedule', href: 'schedule', title: 'Расписание' },
     { key: 'price', href: 'price', title: 'Цены' },
-    { key: 'master', href: 'masters', title: 'Инструкторы' },
+    { key: 'masters', href: 'masters', title: 'Инструкторы' },
     { key: 'rent', href: 'rent', title: 'Аренда залов' },
     { key: 'contact', href: 'contact', title: 'Контакты' },
 ];
@@ -97,6 +97,7 @@ class Index extends React.Component {
                         </Row>
                     </div>
                 </Headroom>
+                { opened && <div className={css.backdrop} onClick={() => this.handleToggleMenu(false)}/>}
                 <Menu className={[ css.menuRight, opened && css.opened ].filter(Boolean).join(' ')} active={active} list={navigation}>
                     <CloseSVG className={css.close} onClick={() => this.handleToggleMenu(false)} />
                 </Menu>

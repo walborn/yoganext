@@ -14,7 +14,7 @@ export default () => (
                 <div className={css.item}>Фитнес.</div>
             </div>
             <h2>Характеристики</h2>
-            <div                    >
+            <div>
                 <div className={css.item}>Площадь залов: 40 и 50 м2</div>
                 <div className={css.item}>Высота потолков: 4 м</div>
                 <div className={css.item}>Зеркала на стенах</div>
