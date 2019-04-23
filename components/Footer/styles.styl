@@ -1,0 +1,139 @@
+@import '../../static/styles/constants.styl'
+
+footer
+  background: color-brown
+  color: color-brown--light
+
+.footer
+  padding: 20px
+
+.logo
+  position: relative
+  display: inline-block
+  width: 100px
+  height: 100px
+  vertical-align: top
+  img
+    width: 100%
+
+
+.social
+  display: inline-block
+  list-style-type: none
+  margin: 0
+  padding: 30px 0 0 30px
+  vertical-align: top
+  > li
+    display: inline-block
+    &:not(:last-child)
+      padding-right: 10px
+    .vk
+    .insta
+    .fb
+      fill: color-orange
+    .vk:hover
+      fill: #45668e
+
+    .insta:hover
+      fill: #c13584
+
+    .fb:hover
+      fill: #3b5998
+
+.contacts
+  display: inline-block
+  margin: 0
+  padding: 0
+  list-style-type: none
+  max-width: 350px
+  float: right
+  > li
+    position: relative
+    padding-left: 30px
+    line-height: 24px
+    a
+      color: color-brown--light
+      text-decoration: none
+    .whatsapp
+      padding-left: 10px
+      svg
+        width: 16px
+        height: 16px
+        fill: color-orange
+
+      &:hover svg
+        fill: #25d366
+
+    .viber
+      padding-left: 10px
+      svg
+        width: 16px
+        height: 16px
+        fill: color-orange
+
+      &:hover svg
+        fill: #8f5db7
+
+
+    .file
+    .location
+    .phone
+    .email
+    .whatsapp
+    .viber
+      position: absolute
+      left: 0
+      top: 2px
+      width: 16px
+      fill-opacity: .85
+    .file
+    .location
+    .phone
+    .email
+      fill: color-orange
+    .whatsapp
+      top: 3px
+      left: 185px
+
+    .viber
+      top: 3px
+      left: 165px
+
+    .file:hover
+      fill: #34a853
+
+    .location:hover
+      fill: color-red
+
+    .phone:hover
+      fill: #4285f4
+
+    .email:hover
+      fill: #dd4b39
+
+    .whatsapp:hover
+      fill: #25d366
+
+    .viber:hover
+      fill: #8f5db7
+
+@media only screen and (max-width: 700px)
+  .logo
+    display: block
+    margin: 0 auto
+
+  .social
+    display: block
+    text-align: center
+    padding: 20px 0 0 0
+
+  .contacts
+    display: block
+    margin: 0 auto
+    padding-top: 20px
+    float: none
+    &Item
+      padding-left: 25px
+
+
+

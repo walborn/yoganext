@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'next/router';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/index';
 import masters from './db';
 import { color, shadow } from '../../static/styles/constants';
 

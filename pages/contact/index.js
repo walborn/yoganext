@@ -1,5 +1,5 @@
 import React  from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/index';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import LocationSVG from '../../static/svg/location.svg';
 import PhoneSVG from '../../static/svg/phone.svg';
@@ -10,7 +10,7 @@ import VkSVG from '../../static/svg/social/vk.svg';
 import InstaSVG from '../../static/svg/social/insta.svg';
 import FbSVG from '../../static/svg/social/fb.svg';
 import FileSVG from '../../static/svg/file.svg';
-import './styles.scss';
+import css from './styles.styl';
 
 
 export default class Contacts extends React.PureComponent {
@@ -23,40 +23,39 @@ export default class Contacts extends React.PureComponent {
             <Layout>
                 <h1>Как нас найти?</h1>
 
-                <div className="contacts">
-                    <ul className="contacts__list">
-                        <li className="contacts__item"><LocationSVG
-                            className="contacts__image contacts__image--location"/>м. Бибирево, ул. Мурановская, д.5, 3
-                            этаж, офис 305
+                <div className={css.contacts}>
+                    <ul className={css.list}>
+                        <li className={css.item}><LocationSVG
+                            className={css.location} />м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
                         </li>
-                        <li className="contacts__item">
-                            <a href="tel:+79168765413"><PhoneSVG className="contacts__image contacts__image--phone"/>+7
+                        <li className={css.item}>
+                            <a href="tel:+79168765413"><PhoneSVG className={css.phone}/>+7
                                 (916) 876-54-13</a>
-                            <a className="contacts__image contacts__image--whatsapp"
+                            <a className={css.whatsapp}
                                href="https://wa.me/79168765413"><WhatsAppSVG/></a>
-                            <a className="contacts__image contacts__image--viber"
+                            <a className={css.viber}
                                href="viber://chat?number=79168765413"><ViberSVG/></a>
                         </li>
-                        <li className="contacts__item"><a href="tel:+79295659511"><PhoneSVG
-                            className="contacts__image contacts__image--phone"/>+7 (929) 565-95-11</a></li>
-                        <li className="contacts__item">
+                        <li className={css.item}><a href="tel:+79295659511"><PhoneSVG
+                            className={css.phone}/>+7 (929) 565-95-11</a></li>
+                        <li className={css.item}>
                             <a href="mailto:yoga-club-om@yandex.ru?subject=Запись"><EmailSVG
-                                className="contacts__image contacts__image--email"/>yoga-club-om@yandex.ru</a>
+                                className={css.email}/>yoga-club-om@yandex.ru</a>
                         </li>
-                        <li className="contacts__item"><a href="https://vk.com/yoga.altufyevo" target="_blank"><VkSVG
-                            className="contacts__image contacts__image--vk"/>Вконтакте</a></li>
-                        <li className="contacts__item"><a href="https://www.instagram.com/yogaclub_om_moscow/"
+                        <li className={css.item}><a href="https://vk.com/yoga.altufyevo" target="_blank"><VkSVG
+                            className={css.vk}/>Вконтакте</a></li>
+                        <li className={css.item}><a href="https://www.instagram.com/yogaclub_om_moscow/"
                                                           target="_blank"><InstaSVG
-                            className="contacts__image contacts__image--insta"/>Инстаграм</a></li>
-                        <li className="contacts__item"><a href="https://www.facebook.com/yogaclubommoscow/"
+                            className={css.insta}/>Инстаграм</a></li>
+                        <li className={css.item}><a href="https://www.facebook.com/yogaclubommoscow/"
                                                           target="_blank"><FbSVG
-                            className="contacts__image contacts__image--fb"/>Фейсбук</a></li>
-                        <li className="contacts__item"><a
+                            className={css.fb}/>Фейсбук</a></li>
+                        <li className={css.item}><a
                             href="http://yoga-club-om.ru/Dogovor_na_zanyatia_yogoy.docx"><FileSVG
-                            className="contacts__image contacts__image--file"/>Скачать договор оферты</a></li>
+                            className={css.file}/>Скачать договор оферты</a></li>
                     </ul>
 
-                    <div className="contacts__map">
+                    <div className={css.map}>
                         <YMaps>
                             <Map
                                 width="100%"

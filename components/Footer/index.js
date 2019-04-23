@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Row from '../Row';
 import LocationSVG from '../../static/svg/location.svg';
 import PhoneSVG from '../../static/svg/phone.svg';
 import WhatsAppSVG from '../../static/svg/whatsapp.svg';
@@ -9,31 +10,31 @@ import VkSVG from '../../static/svg/social/vk.svg';
 import InstaSVG from '../../static/svg/social/insta.svg';
 import FbSVG from '../../static/svg/social/fb.svg';
 import FileSVG from '../../static/svg/file.svg';
-import './styles.scss';
+import css from './styles.styl';
 
 
 export default () => (
-    <footer id="footer">
-        <div className="footer row">
-            <Link href="/"><a className="logo"><img src="/static/images/logoOrange.png" /></a></Link>
-            <ul className="social">
-                <li className="social__item"><a href="https://vk.com/yoga.altufyevo" target="_blank"><VkSVG className="social__image social__image--vk" /></a></li>
-                <li className="social__item"><a href="https://www.instagram.com/yogaclub_om_moscow/" target="_blank"><InstaSVG className="social__image social__image--insta" /></a></li>
-                <li className="social__item"><a href="https://www.facebook.com/yogaclubommoscow/" target="_blank"><FbSVG className="social__image social__image--fb" /></a></li>
+    <footer className={css.footer}>
+        <Row>
+            <Link href="/"><a className={css.logo}><img src="/static/images/logoOrange.png" /></a></Link>
+            <ul className={css.social}>
+                <li><a href="https://vk.com/yoga.altufyevo" target="_blank"><VkSVG className={css.vk} /></a></li>
+                <li><a href="https://www.instagram.com/yogaclub_om_moscow/" target="_blank"><InstaSVG className={css.insta} /></a></li>
+                <li><a href="https://www.facebook.com/yogaclubommoscow/" target="_blank"><FbSVG className={css.fb} /></a></li>
             </ul>
-            <ul className="contacts">
-                <li className="contacts__item"><a href={`${process.env.PUBLIC_URL}/privacy_policy_yoga_club_om.pdf`}><FileSVG className="contacts__image contacts__image--file" />Политика конфиденциальности</a></li>
-                <li className="contacts__item"><LocationSVG className="contacts__image contacts__image--location" />Москва, м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305</li>
-                <li className="contacts__item">
-                    <a href="tel:+79168765413"><PhoneSVG className="contacts__image contacts__image--phone" />+7 (916) 876-54-13</a>
-                    <a className="contacts__link--whatsapp" href="https://wa.me/79168765413"><WhatsAppSVG /></a>
-                    <a className="contacts__link--viber" href="viber://chat?number=79168765413"><ViberSVG /></a>
+            <ul className={css.contacts}>
+                <li><a href={`${process.env.PUBLIC_URL}/privacy_policy_yoga_club_om.pdf`}><FileSVG className={css.file} />Политика конфиденциальности</a></li>
+                <li><LocationSVG className={css.location} />Москва, м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305</li>
+                <li>
+                    <a href="tel:+79168765413"><PhoneSVG className={css.phone} />+7 (916) 876-54-13</a>
+                    <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
+                    <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG /></a>
                 </li>
-                <li className="contacts__item"><a href="tel:+79295659511"><PhoneSVG className="contacts__image contacts__image--phone" />+7 (929) 565-95-11</a></li>
-                <li className="contacts__item">
-                    <a href="mailto:yoga-club-om@yandex.ru?subject=Запись"><EmailSVG className="contacts__image contacts__image--email" />yoga-club-om@yandex.ru</a>
+                <li><a href="tel:+79295659511"><PhoneSVG className={css.phone} />+7 (929) 565-95-11</a></li>
+                <li>
+                    <a href="mailto:yoga-club-om@yandex.ru?subject=Запись"><EmailSVG className={css.email} />yoga-club-om@yandex.ru</a>
                 </li>
             </ul>
-        </div>
+        </Row>
     </footer>
 );

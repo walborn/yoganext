@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.scss';
+import css from './styles.styl';
 
 
 export default class Button extends React.Component {
@@ -22,7 +22,7 @@ export default class Button extends React.Component {
         return (
             <button
                 type={type}
-                className={[ 'button', className, disabled && 'disabled', color ].filter(Boolean).join(' ')}
+                className={[ css.button, className, disabled && css.disabled, css[color] ].filter(Boolean).join(' ')}
                 disabled={disabled}
                 onClick={onClick}
             >

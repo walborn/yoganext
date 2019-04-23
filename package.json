@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-stylus": "^1.0.1",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.3",
@@ -21,7 +22,8 @@
     "react-dom": "^16.8.6",
     "react-headroom": "^2.2.8",
     "react-markdown": "^4.0.6",
-    "react-yandex-maps": "^3.0.2"
+    "react-yandex-maps": "^3.0.2",
+    "stylus": "^0.54.5"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.0.1"

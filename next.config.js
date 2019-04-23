@@ -1,4 +1,8 @@
-const withSass = require('@zeit/next-sass');
-module.exports = withSass({
-    target: 'serverless'
+const withStylus = require('@zeit/next-stylus');
+module.exports = withStylus({
+    cssModules: true,
+    cssLoaderOptions: {
+        importLoaders: 2,
+        localIdentName: "[local]___[hash:base64:6]",
+    }
 });

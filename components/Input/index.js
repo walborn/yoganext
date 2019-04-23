@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './styles.scss';
+import css from './styles.styl';
 
 
 export default class Input extends Component {
@@ -59,26 +59,27 @@ export default class Input extends Component {
             <div
                 ref={(r) => { this.$parent = r; }}
                 className={[
-                    'input',
+                    css.wrapper,
                     className,
-                    disabled && 'disabled',
-                    readOnly && 'readonly',
-                    failure && 'failure',
-                    value && title && 'with-title',
-                    cleaner && 'with-cleaner',
+                    disabled && css.disabled,
+                    readOnly && css.readonly,
+                    failure && css.failure,
+                    value && title && css.withTitle,
+                    cleaner && css.withCleaner,
                 ].filter(Boolean).join(' ')}
 
             >
                 <input
                     {...props}
                     ref={(r) => { this.$input = r; }}
+                    className={css.input}
                     value={value}
                     placeholder={placeholder}
                     readOnly={readOnly}
                     disabled={disabled}
                     onChange={e => this.handleChange(e.target)}
                 />
-                <div className="input__title">
+                <div className={css.title}>
                     {value && title}
                 </div>
             </div>

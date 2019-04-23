@@ -1,0 +1,67 @@
+@import '../../static/styles/constants.styl'
+
+button-variant(color, background, border)
+  color: color
+  background-color: background
+  border: 1px solid border
+  svg
+    fill: color
+    .need-stroke
+      stroke: color !important
+
+
+  &:not(.disabled)
+    &:focus, &:hover
+      color: color
+      background-color: darken(background, 10)
+
+    &:focus
+      border-color: darken(border, 30)
+      outline: none
+
+    &:hover
+      border-color: darken(border, 20)
+
+  &.disabled
+    cursor: default
+    opacity: .5
+    pointer-events: none
+
+
+
+.button
+  position: relative
+  display: inline-block
+  box-sizing: border-box
+  text-align: center
+  text-decoration: none
+  border: 1px solid transparent
+  border-radius: 4px
+  cursor: pointer
+  transition: background .1s ease-in-out
+  font-size: inherit
+  width: 100%
+  line-height: 30px
+
+  &.silver
+    button-variant(#6b6e7c, color-silver, transparent)
+
+  &.blue
+    button-variant(#fff, color-blue, transparent)
+
+  &.green
+    button-variant(#fff, color-green, transparent)
+
+  &.red
+    button-variant(#fff, color-red, transparent)
+
+  &.orange
+    button-variant(#fff, color-orange, transparent)
+
+  &.gray
+    button-variant(#fff, color-gray, transparent)
+
+  &.null
+    button-variant(color-gray, #fff, #fff)
+
+
