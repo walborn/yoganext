@@ -1,9 +1,9 @@
 import React  from 'react';
 import fetch from 'isomorphic-unfetch';
-import Layout from '../../components/Layout/index'
-import Button from '../../components/Button';
-import TimeSVG from '../../static/svg/time.svg';
-import css from './styles.styl';
+import Layout from '../components/Layout/index'
+import Button from '../components/Button';
+import TimeSVG from '../static/svg/time.svg';
+import css from '../styles/scedule.styl';
 
 const WEEKDAYS = [ 'sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat' ];
 const weekdays = { 'ru': { sun: 'Вс', mon: 'Пн', tue: 'Вт', wed: 'Ср', thurs: 'Чт', fri: 'Пт', sat: 'Сб' } };

@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout/index';
-import css from './styles.styl';
+import Layout from '../components/Layout/index';
+import css from '../styles/rent.styl';
 
 
 export default () => (

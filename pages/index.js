@@ -1,6 +1,7 @@
 import Layout from '../components/Layout/index'
 import Unlimited from '../components/Unlimited/index';
-import css from '../static/styles/pages/index.styl';
+import css from '../styles/index.styl';
+
 
 export default () => (
     <Layout>

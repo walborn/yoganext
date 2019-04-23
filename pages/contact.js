@@ -1,16 +1,16 @@
 import React  from 'react';
-import Layout from '../../components/Layout/index';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
-import LocationSVG from '../../static/svg/location.svg';
-import PhoneSVG from '../../static/svg/phone.svg';
-import WhatsAppSVG from '../../static/svg/whatsapp.svg';
-import ViberSVG from '../../static/svg/viber.svg';
-import EmailSVG from '../../static/svg/email.svg';
-import VkSVG from '../../static/svg/social/vk.svg';
-import InstaSVG from '../../static/svg/social/insta.svg';
-import FbSVG from '../../static/svg/social/fb.svg';
-import FileSVG from '../../static/svg/file.svg';
-import css from './styles.styl';
+import Layout from '../components/Layout/index';
+import LocationSVG from '../static/svg/location.svg';
+import PhoneSVG from '../static/svg/phone.svg';
+import WhatsAppSVG from '../static/svg/whatsapp.svg';
+import ViberSVG from '../static/svg/viber.svg';
+import EmailSVG from '../static/svg/email.svg';
+import VkSVG from '../static/svg/social/vk.svg';
+import InstaSVG from '../static/svg/social/insta.svg';
+import FbSVG from '../static/svg/social/fb.svg';
+import FileSVG from '../static/svg/file.svg';
+import css from '../styles/contact.styl';
 
 
 export default class Contacts extends React.PureComponent {
