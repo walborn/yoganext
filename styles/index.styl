@@ -33,3 +33,85 @@
 
   section
     padding: 10px 0
+
+  .schedule
+    overflow: scroll
+  .table
+    border-collapse: collapse
+    min-width: 100%
+    .header
+      .time
+        text-align: center
+        width: 50px
+        svg
+          fill: color-orange
+
+      .hItem
+        font-weight: 600
+        color: color-font--light
+        cursor: pointer
+        transition: background-color 0.2s
+        box-sizing: border-box
+        text-align: center
+        &:hover
+          box-shadow:inset 0 0 0 1px lighten(color-menu, 5)
+          background-color: lighten(color-menu, 5)
+
+        &.active
+          background-color: color-menu
+          box-shadow:inset 0 0 0 1px lighten(color-orange, 20)
+
+
+    .row
+      &:nth-child(2n + 1)
+        background: rgba(color-brown--light, .05)
+
+    .cellTime
+      color: color-orange
+      text-align: center
+
+    .cell
+      font-size: 11px
+      padding: 5px
+      .cellItem
+        margin: 10px 0
+        padding: 10px
+        text-align: center
+        box-sizing: border-box
+        box-shadow: box-shadow
+        border-radius: 6px
+        cursor: pointer
+        &:hover
+          box-shadow: box-shadow--hover
+
+
+      .category
+        border-radius: 4px
+
+      .ashtanga
+        background-color: color-blue
+
+      .fighting
+        background-color: color-red
+
+      .hatha
+        background-color: color-green
+
+      .time
+        color: color-orange
+
+      .master
+        font-size: 14px
+        font-weight: 300
+        &.alternate
+          span:first-child
+            color: color-gray--light
+
+          span:last-child
+            color: color-blue
+
+        &.disabled
+          color: color-red
+
+        &.blank
+          color: color-gray--light

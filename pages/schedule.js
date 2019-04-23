@@ -6,7 +6,7 @@ import TimeSVG from '../static/svg/time.svg';
 import css from '../styles/scedule.styl';
 
 const WEEKDAYS = [ 'sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat' ];
-const weekdays = { 'ru': { sun: 'Вс', mon: 'Пн', tue: 'Вт', wed: 'Ср', thurs: 'Чт', fri: 'Пт', sat: 'Сб' } };
+const weekdays = { 'ru': { sun: 'Вс', mon: 'Пн', tue: 'Вт', wed: 'Ср', thurs: 'Чт', fri: 'Пт', sat: 'Сб', order: [ 1, 2, 3, 4, 5, 6, 7, 0 ] } };
 const hhmm = minutes => ((mm, minutes) => `${`0${(minutes - mm)/60}`.slice(-2)}:${`0${mm}`.slice(-2)}`)(minutes % 60, minutes);
 
 
@@ -42,6 +42,7 @@ export default class Schedule extends React.Component {
             return res;
         }, []);
 
+        console.log(day);
         return (
             <Layout>
                 <div className={css.schedule}>
@@ -57,13 +58,13 @@ export default class Schedule extends React.Component {
                                 <div className={css.day}>
                                     <div className={css.header}>
                                         {
-                                            WEEKDAYS.map((wd, index) => (
+                                            weekdays.ru.order.map(d => (
                                                 <div
-                                                    key={wd}
-                                                    className={[ css.item, index === day && css.active ].filter(Boolean).join(' ')}
-                                                    onClick={() => index !== day && this.handleChangeDay(index)}
+                                                    key={WEEKDAYS[d]}
+                                                    className={[ css.item, d === day && css.active ].filter(Boolean).join(' ')}
+                                                    onClick={() => d !== day && this.handleChangeDay(d)}
                                                 >
-                                                    {weekdays.ru[wd]}
+                                                    {weekdays.ru[WEEKDAYS[d]]}
                                                 </div>
                                             ))
                                         }
@@ -93,13 +94,13 @@ export default class Schedule extends React.Component {
                                     <tr className={css.header}>
                                         <td className={css.time}><TimeSVG/></td>
                                         {
-                                            WEEKDAYS.map((wd, index) => (
+                                            weekdays.ru.order.map(d => (
                                                 <td
-                                                    key={wd}
-                                                    onClick={() => this.setState({ day: index })}
-                                                    className={[ css.item, index === day && css.active ].filter(Boolean).join(' ')}
+                                                    key={WEEKDAYS[d]}
+                                                    onClick={() => this.setState({ day: d })}
+                                                    className={[ css.item, d === day && css.active ].filter(Boolean).join(' ')}
                                                 >
-                                                    {weekdays.ru[wd]}
+                                                    {weekdays.ru[WEEKDAYS[d]]}
                                                 </td>
                                             ))
                                         }
@@ -111,7 +112,7 @@ export default class Schedule extends React.Component {
                                             <tr className={css.row} key={index}>
                                                 <td className={css.cellTime}>{index}</td>
                                                 {
-                                                    WEEKDAYS.map((_, d) => (
+                                                    weekdays.ru.order.map(d => (
                                                         <td className={css.cell} key={d}>
                                                             {
                                                                 row[d] && row[d].map(i => (
