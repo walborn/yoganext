@@ -23,8 +23,16 @@ export default () => (
                 <li><a href="https://www.facebook.com/yogaclubommoscow/" target="_blank"><FbSVG className={css.fb} /></a></li>
             </ul>
             <ul className={css.contacts}>
-                <li><a href={`${process.env.PUBLIC_URL}/privacy_policy_yoga_club_om.pdf`}><FileSVG className={css.file} />Политика конфиденциальности</a></li>
-                <li><LocationSVG className={css.location} />Москва, м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305</li>
+                <li>
+                    <a href={`${process.env.PUBLIC_URL}/privacy_policy_yoga_club_om.pdf`}>
+                        <FileSVG className={css.file} />Политика конфиденциальности
+                    </a>
+                </li>
+                <li><LocationSVG className={css.location} />
+                    <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
+                        м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
+                    </a>
+                </li>
                 <li>
                     <a href="tel:+79168765413"><PhoneSVG className={css.phone} />+7 (916) 876-54-13</a>
                     <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
@@ -32,7 +40,9 @@ export default () => (
                 </li>
                 <li><a href="tel:+79295659511"><PhoneSVG className={css.phone} />+7 (929) 565-95-11</a></li>
                 <li>
-                    <a href="mailto:yoga-club-om@yandex.ru?subject=Запись"><EmailSVG className={css.email} />yoga-club-om@yandex.ru</a>
+                    <a href="mailto:yoga-club-om@yandex.ru?subject=Запись">
+                        <EmailSVG className={css.email} />yoga-club-om@yandex.ru
+                    </a>
                 </li>
             </ul>
         </Row>

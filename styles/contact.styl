@@ -21,11 +21,40 @@
       line-height: 30px
       > a
         text-decoration: none
-        color: color-blue
-        &:hover
-          color: darken(color-blue, 20)
+        color: color-brown
+      &:hover
+        color: darken(color-blue, 20)
+        > a
+          color: color-brown--light
+        svg
+          fill-opacity: 1
+        .whatsapp
           svg
-            fill-opacity: 1
+            fill: #25d366
+
+        .viber
+          svg
+            fill: #8f5db7
+        .location
+          fill: color-red
+
+        .phone
+          fill: #4285f4
+
+        .email
+          fill: #dd4b39
+
+        .vk
+          fill: #45668e
+
+        .insta
+          fill: #c13584
+
+        .fb
+          fill: #3b5998
+
+        .file
+          fill: #34a853
 
     .whatsapp
     .viber
@@ -38,41 +67,41 @@
     .file
       position: absolute
       left: 0
-      top: 50%
-      transform: translateY(-50%)
+      top: 5px
       width: 24px
       fill-opacity: .85
+      fill: color-orange
 
     .whatsapp
       left: auto
       padding-left: 10px
       svg
-        fill: #25d366
+        fill: color-orange
 
     .viber
       left: auto
       padding-left: 40px
       svg
-        fill: #8f5db7
-    .location
+        fill: color-orange
+    .location:hover
       fill: color-red
 
-    .phone
+    .phone:hover
       fill: #4285f4
 
-    .email
+    .email:hover
       fill: #dd4b39
 
-    .vk
+    .vk:hover
       fill: #45668e
 
-    .insta
+    .insta:hover
       fill: #c13584
 
-    .fb
+    .fb:hover
       fill: #3b5998
 
-    .file
+    .file:hover
       fill: #34a853
 
 

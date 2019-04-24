@@ -19,7 +19,7 @@ import css from './styles.styl';
 
 
 const navigation = [
-    { key: 'home', href: '', title: 'Главная' },
+    { key: '', href: '', title: 'Главная' },
     { key: 'schedule', href: 'schedule', title: 'Расписание' },
     { key: 'price', href: 'price', title: 'Цены' },
     { key: 'masters', href: 'masters', title: 'Инструкторы' },
