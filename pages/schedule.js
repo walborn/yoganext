@@ -42,7 +42,6 @@ export default class Schedule extends React.Component {
             return res;
         }, []);
 
-        console.log(day);
         return (
             <Layout>
                 <div className={css.schedule}>

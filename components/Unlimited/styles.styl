@@ -3,11 +3,17 @@
 .unlimited
   .info
   .form
+    display: inline-block
+    vertical-align: top
     max-width: 500px
     margin: 0 auto
 
-  .form > *
-    margin-bottom: 10px
+  .info
+    width: 60%
+  .form
+    width: 40%
+    > *
+      margin-bottom: 10px
 
   .paragraph
     position: relative
@@ -23,12 +29,9 @@
       background-color: orange
 
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 780px)
   .unlimited
     .info
     .form
       display: block
       width: 100%
-
-
-
