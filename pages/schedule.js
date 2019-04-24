@@ -6,14 +6,13 @@ import TimeSVG from '../static/svg/time.svg';
 import css from '../styles/scedule.styl';
 
 const WEEKDAYS = [ 'sun', 'mon', 'tue', 'wed', 'thurs', 'fri', 'sat' ];
-const weekdays = { 'ru': { sun: 'Вс', mon: 'Пн', tue: 'Вт', wed: 'Ср', thurs: 'Чт', fri: 'Пт', sat: 'Сб', order: [ 1, 2, 3, 4, 5, 6, 7, 0 ] } };
+const weekdays = { 'ru': { sun: 'Вс', mon: 'Пн', tue: 'Вт', wed: 'Ср', thurs: 'Чт', fri: 'Пт', sat: 'Сб', order: [ 1, 2, 3, 4, 5, 6, 0 ] } };
 const hhmm = minutes => ((mm, minutes) => `${`0${(minutes - mm)/60}`.slice(-2)}:${`0${mm}`.slice(-2)}`)(minutes % 60, minutes);
 
 
 export default class Schedule extends React.Component {
     static Master = ({ className, disabled, alternate, master }) => {
         const classNames = name => [ className, css[name] ].join(' ');
-        if (disabled) return <div className={classNames('disabled')}>Отмена</div>;
         if (alternate) return <div className={classNames('alternate')}><span>{master}</span> → <span>{alternate}</span></div>;
         if (master) return <div className={classNames('master')}>{master}</div>;
         return <div className={classNames('blank')}>Не назначен</div>;
@@ -82,63 +81,65 @@ export default class Schedule extends React.Component {
                                                         disabled={i.disabled}
                                                     />
                                                     <div className={css.level}>{i.level}</div>
+                                                    <div className={css.note} dangerouslySetInnerHTML={{ __html: i.note }} />
                                                 </div>
                                             ))
                                         }
                                     </div>
                                 </div>
                             ) : (
-                                <table className={css.table}>
-                                    <thead>
-                                    <tr className={css.header}>
-                                        <td className={css.time}><TimeSVG/></td>
+                                <div className={css.wrapper}>
+                                    <table className={css.table}>
+                                        <thead>
+                                        <tr className={css.header}>
+                                            <td className={css.time}><TimeSVG/></td>
+                                            {
+                                                weekdays.ru.order.map(d => (
+                                                    <td
+                                                        key={WEEKDAYS[d]}
+                                                        onClick={() => this.setState({ day: d })}
+                                                        className={[ css.item, d === day && css.active ].filter(Boolean).join(' ')}
+                                                    >
+                                                        {weekdays.ru[WEEKDAYS[d]]}
+                                                    </td>
+                                                ))
+                                            }
+                                        </tr>
+                                        </thead>
+                                        <tbody style={{ transform: 'translate(0, 10px)' }}>
                                         {
-                                            weekdays.ru.order.map(d => (
-                                                <td
-                                                    key={WEEKDAYS[d]}
-                                                    onClick={() => this.setState({ day: d })}
-                                                    className={[ css.item, d === day && css.active ].filter(Boolean).join(' ')}
-                                                >
-                                                    {weekdays.ru[WEEKDAYS[d]]}
-                                                </td>
+                                            table.map((row, index) => (
+                                                <tr className={css.row} key={index}>
+                                                    <td className={css.cellTime}>{index}</td>
+                                                    {
+                                                        weekdays.ru.order.map(d => (
+                                                            <td className={css.cell} key={d}>
+                                                                {
+                                                                    row[d] && row[d].filter(i => !i.hidden).map(i => (
+                                                                        <div key={i.id} className={css.cellItem}>
+                                                                            <div className={[ css.category, css[i.category] ].join(' ')}/>
+                                                                            <div className={css.time}>{hhmm(+i.time)} - {hhmm(+i.time + +i.duration)}</div>
+                                                                            <div className={css.title}>{i.title}</div>
+                                                                            <Schedule.Master
+                                                                                className={css.master}
+                                                                                master={i.master}
+                                                                                alternate={i.alternate}
+                                                                            />
+                                                                            <div className={css.level}>{i.level}</div>
+                                                                            <div className={css.note} dangerouslySetInnerHTML={{ __html: i.note }} />
+                                                                        </div>
+                                                                    ))
+                                                                }
+                                                            </td>
+
+                                                        ))
+                                                    }
+                                                </tr>
                                             ))
                                         }
-                                    </tr>
-                                    </thead>
-                                    <tbody style={{ transform: 'translate(0, 10px)' }}>
-                                    {
-                                        table.map((row, index) => (
-                                            <tr className={css.row} key={index}>
-                                                <td className={css.cellTime}>{index}</td>
-                                                {
-                                                    weekdays.ru.order.map(d => (
-                                                        <td className={css.cell} key={d}>
-                                                            {
-                                                                row[d] && row[d].map(i => (
-                                                                    <div key={i.id} className={css.cellItem}>
-                                                                        <div className={[ css.category, css[i.category] ].join(' ')}/>
-                                                                        <div className={css.time}>{hhmm(+i.time)} - {hhmm(+i.time + +i.duration)}</div>
-                                                                        <div className={css.title}>{i.title}</div>
-                                                                        <Schedule.Master
-                                                                            className={css.master}
-                                                                            master={i.master}
-                                                                            alternate={i.alternate}
-                                                                            disabled={i.disabled}
-                                                                        />
-                                                                        <div className={css.level}>{i.level}</div>
-                                                                    </div>
-
-                                                                ))
-                                                            }
-                                                        </td>
-
-                                                    ))
-                                                }
-                                            </tr>
-                                        ))
-                                    }
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
                             )
                     }
                 </div>
@@ -149,7 +150,7 @@ export default class Schedule extends React.Component {
 
 
 Schedule.getInitialProps = async function() {
-    const res = await fetch('https://om-rest.herokuapp.com/lessons?sort=day'); // disabled:false
+    const res = await fetch('https://om-rest.herokuapp.com/lessons?sort=day'); // hidden:false
     const lessons = await res.json();
     const list = lessons.rows.reduce((res, item) => ({...res, [item.day]: [...(res[item.day] || []), item]}), {});
 

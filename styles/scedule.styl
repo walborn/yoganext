@@ -69,6 +69,7 @@ main
 
 
         .time
+          color: color-blue
           font-weight: 700
 
         .master
@@ -76,7 +77,8 @@ main
           font-weight: 300
           &.alternate
             span:first-child
-              color: #b2bbc6
+              color: color-gray--light
+              text-decoration: line-through
 
             span:last-child
               color: color-blue
@@ -86,8 +88,13 @@ main
             color: color-red
 
           &.blank
-            color: #b2bbc6
+            color: color-gray--light
 
+        .note
+          color: color-orange
+          
+    .wrapper
+      overflow: scroll
     .table
       border-collapse: collapse
       min-width: 100%
@@ -149,14 +156,15 @@ main
           background-color: color-green
 
         .time
-          color: color-orange
+          color: color-blue
 
         .master
           font-size: 14px
           font-weight: 300
           &.alternate
             span:first-child
-              color: #b2bbc6
+              color: color-gray--light
+              text-decoration: line-through
 
             span:last-child
               color: color-blue
@@ -165,8 +173,10 @@ main
             color: color-red
 
           &.blank
-            color: #b2bbc6
+            color: color-gray--light
 
+        .note
+          color: color-orange
 
 
 
