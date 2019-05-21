@@ -150,7 +150,7 @@ export default class Schedule extends React.Component {
 
 
 Schedule.getInitialProps = async function() {
-    const res = await fetch('https://om-rest.herokuapp.com/lessons?sort=day'); // hidden:false
+    const res = await fetch('https://om-rest.herokuapp.com/lessons?sort=day&offset=0&limit=100'); // hidden:false
     const lessons = await res.json();
     const list = lessons.rows.reduce((res, item) => ({...res, [item.day]: [...(res[item.day] || []), item]}), {});
 
