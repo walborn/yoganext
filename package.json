@@ -14,6 +14,7 @@
     "@zeit/next-stylus": "^1.0.1",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
+    "lodash.isequal": "^4.5.0",
     "next": "^8.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

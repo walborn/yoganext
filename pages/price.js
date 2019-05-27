@@ -6,7 +6,7 @@ import css from '../styles/price.styl';
 export default () => (
     <Layout>
         <div className={css.price}>
-            <h2 className={css.header}>Безлимитная неделя</h2>
+            <h2 className={css.header}>Безлимитная неделя!</h2>
             <Unlimited />
             <h2 className={css.header}>Стоимость групповых занятий</h2>
             <section className={css.content}>

@@ -3,6 +3,21 @@
 main
   .schedule
     text-align: center
+    min-height: 100px
+    .loader
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 1001
+      background: radial-gradient(rgba(255,255,255,1) 16%,rgba(255,255,255,0.5) 100%)
+      svg
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        height: 32px
     .view
       max-width: 300px
       margin: 10px 0
