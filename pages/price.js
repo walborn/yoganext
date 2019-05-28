@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../components/Layout/index';
 import Unlimited from '../components/Unlimited/index';
 import css from '../styles/price.styl';

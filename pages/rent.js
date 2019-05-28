@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../components/Layout/index';
 import css from '../styles/rent.styl';
 
