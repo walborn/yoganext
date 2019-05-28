@@ -1,6 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import fetch from 'isomorphic-unfetch';
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../Input';
 import Button from '../Button';
 
@@ -13,13 +13,14 @@ export default class Unlimited extends React.Component {
         phone: undefined,
         recaptcha: undefined,
     };
+
     handleSubmit = () => {
         const { name, phone } = this.state;
         this.setState({ name: undefined, phone: undefined, recaptcha: undefined }, async () => {
             await fetch('https://om-rest.herokuapp.com/feedbacks', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, phone, type: 'unlimited week', content: 'I wan\'t unlimited week'  })
+                body: JSON.stringify({ name, phone, type: 'unlimited week', content: 'I wan\'t unlimited week' }),
             });
 
             this.$name.value = '';
@@ -27,23 +28,26 @@ export default class Unlimited extends React.Component {
             alert('Вы успешно записались на акцию "Безлимитная неделя". В скором времени мы с Вами свяжемся для подтверждения участия!');
             this.$recaptcha.reset();
         });
-
-
     };
+
     handleFocus = () => {
-        if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7' }, 0);
+        if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
     };
+
     handleBlur = () => {
         if (this.$phone.value === '+7') this.$phone.value = '';
     };
-    handleKeyDown = (e) => {
-        const value = this.$phone.value;
-        if ([ 9/*tab*/, 37/*left*/, 39/*right*/,  8/*backspace*/ ].includes(e.keyCode)) return;
-        if (value && e.key === '+' || '1234567890+'.indexOf(e.key) === -1 || value.length > 10) { e.preventDefault(); }
 
+    handleKeyDown = (e) => {
+        const { value } = this.$phone;
+        if ([ 9/* tab */, 37/* left */, 39/* right */, 8/* backspace */ ].includes(e.keyCode)) return;
+        if (value && e.key === '+' || '1234567890+'.indexOf(e.key) === -1 || value.length > 10) { e.preventDefault(); }
     };
+
     handleChange = ({ name, value }) => this.setState({ [name]: value });
+
     handleRecaptcha = recaptcha => this.setState({ recaptcha });
+
     render() {
         const { className } = this.props;
         const { name, phone, recaptcha } = this.state;
@@ -58,7 +62,8 @@ export default class Unlimited extends React.Component {
                 <div className={css.form}>
                     <Input
                         ref={r => this.$name = r}
-                        type="text" name="name"
+                        type="text"
+                        name="name"
                         title="Имя, Фамилия"
                         placeholder="Имя, Фамилия"
                         onChange={this.handleChange}
@@ -79,7 +84,7 @@ export default class Unlimited extends React.Component {
                         sitekey="6Le49wYTAAAAAOF2yXK91DOjY9RHcPLHwOYRtyjj"
                         onChange={this.handleRecaptcha}
                     />
-                    {/*<InputMask ref={r => this.$phone = r} type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} mask="+4\9 99 999 99" maskChar=" " />;*/}
+                    {/* <InputMask ref={r => this.$phone = r} type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} mask="+4\9 99 999 99" maskChar=" " />; */}
                     <Button
                         type="submit"
                         name="submit"

@@ -32,4 +32,4 @@ export default () => (
             </div>
         </div>
     </Layout>
-)
+);

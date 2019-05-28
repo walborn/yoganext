@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { withRouter } from 'next/router'
+import { withRouter } from 'next/router';
 
 import Headroom from 'react-headroom';
 import Row from '../Row/index';
@@ -48,21 +48,21 @@ class Index extends React.Component {
         opened: false,
     };
 
-    handleToggleMenu = (opened) => this.setState({ opened });
+    handleToggleMenu = opened => this.setState({ opened });
 
     render() {
         const { opened } = this.state;
-        const active = (x => Array.isArray(x) ? x[0] : '')(this.props.router.pathname.match(/[a-z]+/));
+        const active = (x => (Array.isArray(x) ? x[0] : ''))(this.props.router.pathname.match(/[a-z]+/));
         return (
             <div className={css.navigation}>
                 <Headroom>
                     <div className={css.top}>
                         <Row>
                             <div className={css.home}>
-                                <Link href="/"><a><img className={[ css.brand, active && css.active ].filter(Boolean).join(' ')} src="/static/images/logoOrange.png"/></a></Link>
+                                <Link href="/"><a><img className={[ css.brand, active && css.active ].filter(Boolean).join(' ')} src="/static/images/logoOrange.png" /></a></Link>
                             </div>
                             <div className={css.location}>
-                                <LocationSVG className={css.image}/>
+                                <LocationSVG className={css.image} />
                                 <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
                                     м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
                                 </a>
@@ -70,23 +70,24 @@ class Index extends React.Component {
                             <div className={css.social}>
                                 <div className={css.item}>
                                     <a href="https://vk.com/yoga.altufyevo" target="_blank">
-                                        <VkSVG className={[ css.image, css.vk ].join(' ')}/>
+                                        <VkSVG className={[ css.image, css.vk ].join(' ')} />
                                     </a>
                                 </div>
                                 <div className={css.item}>
                                     <a href="https://www.instagram.com/yogaclub_om_moscow/" target="_blank">
-                                        <InstaSVG className={[ css.image, css.insta ].join(' ')}/>
+                                        <InstaSVG className={[ css.image, css.insta ].join(' ')} />
                                     </a>
                                 </div>
                                 <div className={css.item}>
                                     <a href="https://www.facebook.com/yogaclubommoscow/" target="_blank">
-                                        <FbSVG className={[ css.image, css.fb ].join(' ')}/></a>
+                                        <FbSVG className={[ css.image, css.fb ].join(' ')} />
+                                    </a>
                                 </div>
                             </div>
                             <div className={css.phone}>
-                                <a href="tel:+79168765413"><PhoneSVG className={css.image}/>+7 (916) 876-54-13</a>
-                                <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG/></a>
-                                <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG/></a>
+                                <a href="tel:+79168765413"><PhoneSVG className={css.image} />+7 (916) 876-54-13</a>
+                                <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
+                                <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG /></a>
                             </div>
                         </Row>
                         <MenuSVG className={css.sandwich} onClick={() => this.handleToggleMenu(true)} />
@@ -97,7 +98,7 @@ class Index extends React.Component {
                         </Row>
                     </div>
                 </Headroom>
-                { opened && <div className={css.backdrop} onClick={() => this.handleToggleMenu(false)}/>}
+                { opened && <div className={css.backdrop} onClick={() => this.handleToggleMenu(false)} />}
                 <Menu className={[ css.menuRight, opened && css.opened ].filter(Boolean).join(' ')} active={active} list={navigation}>
                     <CloseSVG className={css.close} onClick={() => this.handleToggleMenu(false)} />
                 </Menu>

@@ -3,7 +3,7 @@ export default ({ children, ...props }) => (
         {children}
         <style jsx>
             {
-`
+                `
     position: relative;
     display: flow-root;
     box-sizing: border-box;
@@ -16,4 +16,4 @@ export default ({ children, ...props }) => (
         </style>
     </div>
 
-)
+);

@@ -1,0 +1,63 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [ "import", "jsx-a11y", "react" ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": [ "error", { "allow": [ "warn", "error" ] } ],
+    "curly": [ "error", "multi-line" ],
+    "new-cap": [ "error", {
+      "capIsNewExceptions": [
+        "Map",
+        "OrderedMap",
+        "List",
+        "Set",
+        "OrderedSet",
+        "Record",
+        "Connect"
+      ]
+    } ],
+    "react/forbid-prop-types": "off",
+    "object-curly-newline": ["error", { "consistent": true }],
+    "array-bracket-spacing": ["error", "always"],
+    "indent": [ 2, 4, { "SwitchCase": 1 } ],
+    "comma-dangle": [ "error", "always-multiline" ],
+    "max-len": [ "error", 200, 2 ],
+    "one-var": [ "error", "never" ],
+    "no-param-reassign": "error",
+    "arrow-body-style": [ "error", "as-needed" ],
+    "import/extensions": [ "error", "never" ],
+    "import/no-unresolved": 2,
+    "react/jsx-indent-props": [ 1, 4 ],
+    "react/sort-comp": [ 1 ],
+    "react/prop-types": [ 2 ],
+    "react/prefer-stateless-function": 0,
+    "react/jsx-indent": [ 2, 4 ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }],
+    "react/require-default-props": "off",
+    "react/button-has-type": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/no-static-element-interactions": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
+}

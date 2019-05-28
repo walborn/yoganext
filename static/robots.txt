@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+
+Sitemap: https://sitemap-robots.now.sh/sitemap.xml

@@ -1,5 +1,5 @@
-import Layout from '../components/Layout/index'
-import Unlimited from '../components/Unlimited/index'
+import Layout from '../components/Layout/index';
+import Unlimited from '../components/Unlimited/index';
 import css from '../styles/price.styl';
 
 
@@ -49,4 +49,4 @@ export default () => (
             </section>
         </div>
     </Layout>
-)
+);

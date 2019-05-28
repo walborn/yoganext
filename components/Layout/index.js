@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from '../Head'
-import Navigation from '../Navigation'
+import Head from '../Head';
+import Navigation from '../Navigation';
 import Footer from '../Footer';
 import Row from '../Row';
 import css from './styles.styl';
@@ -16,4 +16,4 @@ export default props => (
         </main>
         <Footer />
     </div>
-)
+);
