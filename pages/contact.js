@@ -67,7 +67,7 @@ export default class Contacts extends React.PureComponent {
                             </a>
                         </li>
                         <li className={css.item}>
-                            <a href={`${process.env.PUBLIC_URL}/docs/contact_offer_yoga_club_om.pdf`}>
+                            <a href={`${process.env.PUBLIC_URL}/docs/Договор публичной оферты на занятия йогой.docx`}>
                                 <FileSVG className={css.file} />Скачать договор оферты
                             </a>
                         </li>
