@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/index';
+import Subscribe from '../components/Subscribe/index';
 import Unlimited from '../components/Unlimited/index';
 import css from '../styles/index.styl';
 
@@ -14,7 +15,9 @@ export default class Index extends React.PureComponent {
             <Layout>
                 <div className={css.home}>
                     <h1><img className={css.brand} src="/static/images/brand.png" alt="Йога клуб ОМ" /></h1>
-                    <section><strong>Наш клуб</strong> - это сообщество увлеченных людей, целью которых является
+                    <section>
+                        <Subscribe />
+                        <strong>Наш клуб</strong> - это сообщество увлеченных людей, целью которых является
                         саморазвитие и помощь в
                         этом другим людям. Мы всегда открыты для нового, но при этом бережно чтим древние традиции.
                     </section>
