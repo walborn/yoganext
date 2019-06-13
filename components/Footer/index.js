@@ -25,7 +25,7 @@ export default () => (
             </ul>
             <ul className={css.contacts}>
                 <li>
-                    <a href={`${process.env.PUBLIC_URL}/privacy_policy_yoga_club_om.pdf`}>
+                    <a href={`${process.env.PUBLIC_URL}/docs/privacy_policy_yoga_club_om.pdf`}>
                         <FileSVG className={css.file} />Политика конфиденциальности
                     </a>
                 </li>
