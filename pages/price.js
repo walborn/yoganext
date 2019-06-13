@@ -45,6 +45,15 @@ export default () => (
                     <div className={css.amount}>7000 рублей</div> - абонемент на 4 занятия (по 1 часу) в течение 1-го месяца.
                 </div>
             </section>
+            <h2 className={css.header}>Способы оплаты</h2>
+            <section className={css.content}>
+                <div className={css.card}>
+                    <div className={css.amount}>Наличный расчёт</div>
+                </div>
+                <div className={css.card}>
+                    <div className={css.amount}>Банковской картой</div> (у&nbsp;администратора на стойке регистрации)
+                </div>
+            </section>
             <section className={css.info}>
                 Оплачивая занятие, абонемент или услугу, клиент присоединяется к настоящему <a href="/static/docs/privacy_policy_yoga_club_om.pdf">договору-оферте</a>
             </section>

@@ -15,6 +15,7 @@ import FbSVG from '../../static/svg/social/fb.svg';
 import PhoneSVG from '../../static/svg/phone.svg';
 import WhatsAppSVG from '../../static/svg/whatsapp.svg';
 import ViberSVG from '../../static/svg/viber.svg';
+import TelegramSVG from '../../static/svg/telegram.svg';
 import css from './styles.styl';
 
 
@@ -88,6 +89,7 @@ class Index extends React.Component {
                                 <a href="tel:+79168765413"><PhoneSVG className={css.image} />+7 (916) 876-54-13</a>
                                 <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
                                 <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG /></a>
+                                <a className={css.telegram} href="tg://resolve?domain=yoga_club_om"><TelegramSVG /></a>
                             </div>
                         </Row>
                         <MenuSVG className={css.sandwich} onClick={() => this.handleToggleMenu(true)} />

@@ -11,6 +11,7 @@ import InstaSVG from '../static/svg/social/insta.svg';
 import FbSVG from '../static/svg/social/fb.svg';
 import FileSVG from '../static/svg/file.svg';
 import css from '../styles/contact.styl';
+import TelegramSVG from '../static/svg/telegram.svg';
 
 
 export default class Contacts extends React.PureComponent {
@@ -37,6 +38,8 @@ export default class Contacts extends React.PureComponent {
                             </a>
                             <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
                             <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG /></a>
+                            <a className={css.telegram} href="tg://resolve?domain=yoga_club_om"><TelegramSVG /></a>
+
                         </li>
                         <li className={css.item}>
                             <a href="tel:+79295659511">

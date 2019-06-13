@@ -5,6 +5,7 @@ import LocationSVG from '../../static/svg/location.svg';
 import PhoneSVG from '../../static/svg/phone.svg';
 import WhatsAppSVG from '../../static/svg/whatsapp.svg';
 import ViberSVG from '../../static/svg/viber.svg';
+import TelegramSVG from '../../static/svg/telegram.svg';
 import EmailSVG from '../../static/svg/email.svg';
 import VkSVG from '../../static/svg/social/vk.svg';
 import InstaSVG from '../../static/svg/social/insta.svg';
@@ -37,6 +38,7 @@ export default () => (
                     <a href="tel:+79168765413"><PhoneSVG className={css.phone} />+7 (916) 876-54-13</a>
                     <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>
                     <a className={css.viber} href="viber://chat?number=79168765413"><ViberSVG /></a>
+                    <a className={css.telegram} href="tg://resolve?domain=yoga_club_om"><TelegramSVG /></a>
                 </li>
                 <li><a href="tel:+79295659511"><PhoneSVG className={css.phone} />+7 (929) 565-95-11</a></li>
                 <li>
