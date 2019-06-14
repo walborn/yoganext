@@ -51,7 +51,7 @@ export default () => (
                     <div className={css.amount}>Наличный расчёт</div>
                 </div>
                 <div className={css.card}>
-                    <div className={css.amount}>Банковской картой</div> (у&nbsp;администратора на стойке регистрации)
+                    <div className={css.amount}>Банковской картой</div> -&nbsp;у&nbsp;администратора на стойке регистрации
                 </div>
             </section>
             <section className={css.info}>
