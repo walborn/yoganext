@@ -55,7 +55,7 @@ export default () => (
                 </div>
             </section>
             <section className={css.info}>
-                Оплачивая занятие, абонемент или услугу, клиент присоединяется к настоящему <a href="/static/docs/privacy_policy_yoga_club_om.pdf">договору-оферте</a>
+                Оплачивая занятие, абонемент или услугу, клиент присоединяется к настоящему <a href="/static/docs/public-offer__yoga-club-om.pdf">договору-оферте</a>
             </section>
         </div>
     </Layout>
