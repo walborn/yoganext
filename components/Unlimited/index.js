@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../Input';
@@ -8,6 +9,10 @@ import css from './styles.styl';
 
 
 export default class Unlimited extends React.Component {
+    static propTypes = {
+        className: PropTypes.string,
+    };
+
     state = {
         name: undefined,
         phone: undefined,
@@ -30,21 +35,13 @@ export default class Unlimited extends React.Component {
         });
     };
 
-    // handleFocus = () => {
-    //     if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
-    // };
-
-    // handleBlur = () => {
-    //     if (this.$phone.value === '+7') this.$phone.value = '';
-    // };
-
     handleKeyDown = (e) => {
         const { value } = this.$phone;
         if ([ 9/* tab */, 37/* left */, 39/* right */, 8/* backspace */ ].includes(e.keyCode)) return;
         if (value && e.key === '+' || '0123456789 ()-'.indexOf(e.key) === -1 || value.length > 20) { e.preventDefault(); }
     };
 
-    handleChange = ({ name, value }) => this.setState({ [name]: value });
+    handleChange = ({ name, value }) => this.setState({ [name.slice(3)]: value });
 
     handleRecaptcha = recaptcha => this.setState({ recaptcha });
 
@@ -76,8 +73,6 @@ export default class Unlimited extends React.Component {
                         placeholder="Телефон"
                         onChange={this.handleChange}
                         onKeyDown={this.handleKeyDown}
-                        onBlur={this.handleBlur}
-                        onFocus={this.handleFocus}
                     />
                     <ReCAPTCHA
                         ref={r => this.$recaptcha = r}

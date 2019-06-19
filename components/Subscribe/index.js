@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
 import Input from '../Input';
 import Button from '../Button';
@@ -6,6 +7,10 @@ import css from './styles.styl';
 
 
 export default class Subscribe extends React.Component {
+    static propTypes = {
+        className: PropTypes.string,
+    };
+
     state = {
         name: undefined,
         phone: undefined,
@@ -25,14 +30,6 @@ export default class Subscribe extends React.Component {
             alert('Вы успешно записались. В скором времени мы Вам перезвоним!');
         });
     };
-
-    // handleFocus = () => {
-    //     if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
-    // };
-    //
-    // handleBlur = () => {
-    //     if (this.$phone.value === '+7') this.$phone.value = '';
-    // };
 
     handleKeyDown = (e) => {
         const { value } = this.$phone;
@@ -63,8 +60,6 @@ export default class Subscribe extends React.Component {
                     placeholder="Телефон"
                     onChange={this.handleChange}
                     onKeyDown={this.handleKeyDown}
-                    onBlur={this.handleBlur}
-                    onFocus={this.handleFocus}
                 />
                 <Button
                     type="submit"
