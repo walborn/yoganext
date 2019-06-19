@@ -30,18 +30,18 @@ export default class Unlimited extends React.Component {
         });
     };
 
-    handleFocus = () => {
-        if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
-    };
+    // handleFocus = () => {
+    //     if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
+    // };
 
-    handleBlur = () => {
-        if (this.$phone.value === '+7') this.$phone.value = '';
-    };
+    // handleBlur = () => {
+    //     if (this.$phone.value === '+7') this.$phone.value = '';
+    // };
 
     handleKeyDown = (e) => {
         const { value } = this.$phone;
         if ([ 9/* tab */, 37/* left */, 39/* right */, 8/* backspace */ ].includes(e.keyCode)) return;
-        if (value && e.key === '+' || '1234567890+'.indexOf(e.key) === -1 || value.length > 10) { e.preventDefault(); }
+        if (value && e.key === '+' || '0123456789 ()-'.indexOf(e.key) === -1 || value.length > 20) { e.preventDefault(); }
     };
 
     handleChange = ({ name, value }) => this.setState({ [name]: value });
@@ -63,7 +63,7 @@ export default class Unlimited extends React.Component {
                     <Input
                         ref={r => this.$name = r}
                         type="text"
-                        name="name"
+                        name="uw-name"
                         title="Имя, Фамилия"
                         placeholder="Имя, Фамилия"
                         onChange={this.handleChange}
@@ -71,7 +71,7 @@ export default class Unlimited extends React.Component {
                     <Input
                         ref={r => this.$phone = r}
                         type="text"
-                        name="phone"
+                        name="uw-phone"
                         title="+7XXXXXXXXXX"
                         placeholder="Телефон"
                         onChange={this.handleChange}
@@ -90,7 +90,7 @@ export default class Unlimited extends React.Component {
                         name="submit"
                         orange
                         onClick={this.handleSubmit}
-                        disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 11 || !recaptcha}
+                        disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 21 || !recaptcha}
                     >
                         Участвовать
                     </Button>

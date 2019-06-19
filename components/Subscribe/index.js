@@ -26,18 +26,18 @@ export default class Subscribe extends React.Component {
         });
     };
 
-    handleFocus = () => {
-        if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
-    };
-
-    handleBlur = () => {
-        if (this.$phone.value === '+7') this.$phone.value = '';
-    };
+    // handleFocus = () => {
+    //     if (!this.$phone.value) setTimeout(() => { this.$phone.value = '+7'; }, 0);
+    // };
+    //
+    // handleBlur = () => {
+    //     if (this.$phone.value === '+7') this.$phone.value = '';
+    // };
 
     handleKeyDown = (e) => {
         const { value } = this.$phone;
         if ([ 9/* tab */, 37/* left */, 39/* right */, 8/* backspace */ ].includes(e.keyCode)) return;
-        if (value && e.key === '+' || '1234567890+'.indexOf(e.key) === -1 || value.length > 10) { e.preventDefault(); }
+        if (value && e.key === '+' || '0123456789 ()-'.indexOf(e.key) === -1 || value.length > 20) { e.preventDefault(); }
     };
 
     handleChange = ({ name, value }) => this.setState({ [name]: value });
@@ -59,7 +59,7 @@ export default class Subscribe extends React.Component {
                     ref={r => this.$phone = r}
                     type="text"
                     name="phone"
-                    title="+7XXXXXXXXXX"
+                    title="+79999999999"
                     placeholder="Телефон"
                     onChange={this.handleChange}
                     onKeyDown={this.handleKeyDown}
@@ -71,7 +71,7 @@ export default class Subscribe extends React.Component {
                     name="submit"
                     orange
                     onClick={this.handleSubmit}
-                    disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 11}
+                    disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 21}
                 >
                     Записаться
                 </Button>
