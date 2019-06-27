@@ -22,6 +22,8 @@ export default class Slider extends React.Component {
 
     handleStep = step => (e) => {
         if (e) e.preventDefault();
+        clearInterval(this.interval);
+        this.interval = setInterval(this.handleStep(1), 10000);
         const { list } = this.props;
         const { current } = this.state;
         const len = list.length;
