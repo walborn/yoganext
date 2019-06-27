@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/index';
+import Slider from '../components/Slider/index';
 import css from '../styles/rent.styl';
 
 
@@ -25,11 +26,18 @@ export default () => (
             </div>
             <div className={css.thesis}>Цена:</div> от 500 руб./час
             <div className={css.images}>
-                <img src="/static/images/rent/0.jpg" />
-                <img src="/static/images/rent/1.jpg" />
-                <img src="/static/images/rent/2.jpg" />
-                <img src="/static/images/rent/3.jpg" />
-                <img src="/static/images/rent/4.jpg" />
+                <Slider
+                    list={[
+                        '/static/images/gallery/3.jpg',
+                        '/static/images/gallery/4.jpg',
+                        '/static/images/gallery/5.jpg',
+                        '/static/images/gallery/6.jpg',
+                        '/static/images/gallery/1.jpg',
+                    ]}
+                />
+            </div>
+            <div className={css.images}>
+                <img src="/static/images/gallery/Plan_OM.jpg" />
             </div>
         </div>
     </Layout>
