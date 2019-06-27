@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
-import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../Input';
 import Button from '../Button';
 
@@ -16,7 +15,6 @@ export default class Unlimited extends React.Component {
     state = {
         name: undefined,
         phone: undefined,
-        recaptcha: undefined,
     };
 
     handleSubmit = () => {
@@ -31,7 +29,6 @@ export default class Unlimited extends React.Component {
             this.$name.value = '';
             this.$phone.value = '';
             alert('Вы успешно записались на акцию "Безлимитная неделя". В скором времени мы с Вами свяжемся для подтверждения участия!');
-            // this.$recaptcha.reset();
         });
     };
 
@@ -43,11 +40,9 @@ export default class Unlimited extends React.Component {
 
     handleChange = ({ name, value }) => this.setState({ [name.slice(3)]: value });
 
-    // handleRecaptcha = recaptcha => this.setState({ recaptcha });
-
     render() {
         const { className } = this.props;
-        const { name, phone, recaptcha } = this.state;
+        const { name, phone } = this.state;
         return (
             <div className={[ css.unlimited, className ].filter(Boolean).join(' ')}>
                 <div className={css.info}>
@@ -74,17 +69,12 @@ export default class Unlimited extends React.Component {
                         onChange={this.handleChange}
                         onKeyDown={this.handleKeyDown}
                     />
-                    {/*<ReCAPTCHA*/}
-                        {/*ref={r => this.$recaptcha = r}*/}
-                        {/*sitekey="6Le49wYTAAAAAOF2yXK91DOjY9RHcPLHwOYRtyjj"*/}
-                        {/*onChange={this.handleRecaptcha}*/}
-                    {/*/>*/}
                     <Button
                         type="submit"
                         name="submit"
                         orange
                         onClick={this.handleSubmit}
-                        disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 21 || !recaptcha}
+                        disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 21}
                     >
                         Участвовать
                     </Button>

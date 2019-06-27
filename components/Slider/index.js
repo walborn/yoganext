@@ -16,12 +16,12 @@ export default class Slider extends React.Component {
         style: { transform: 'translateX(-100%)' },
     };
 
-    // componentDidMount() { this.interval = setInterval(this.handleNext, 3000); }
-    //
-    // componentWillUnmount() { clearInterval(this.interval); }
+    componentDidMount() { this.interval = setInterval(this.handleStep(1), 10000); }
+
+    componentWillUnmount() { clearInterval(this.interval); }
 
     handleStep = step => (e) => {
-        e.preventDefault();
+        if (e) e.preventDefault();
         const { list } = this.props;
         const { current } = this.state;
         const len = list.length;
