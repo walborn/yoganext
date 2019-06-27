@@ -68,7 +68,7 @@ export default class Subscribe extends React.Component {
                     onClick={this.handleSubmit}
                     disabled={!name || typeof phone !== 'string' || phone.length < 10 || phone.length > 21}
                 >
-                    Записаться
+                    Запрос на обратный звонок
                 </Button>
             </div>
         );

@@ -16,7 +16,7 @@ export default class Index extends React.PureComponent {
             <Layout>
                 <div className={css.home}>
                     <h1><img className={css.brand} src="/static/images/brand.png" alt="Йога клуб ОМ" /></h1>
-                    <Slider list={[ '/static/actions/0.jpg', '/static/actions/dance.jpg', '/static/actions/unlimited_week.png', '/static/actions/yoga_day.png' ]} />
+                    {/*<Slider list={[ '/static/actions/0.jpg', '/static/actions/dance.jpg', '/static/actions/unlimited_week.png', '/static/actions/yoga_day.png' ]} />*/}
                     <section>
                         <Subscribe />
                         <strong>Наш клуб</strong> - это сообщество увлеченных людей, целью которых является

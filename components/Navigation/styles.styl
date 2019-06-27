@@ -128,63 +128,57 @@
       &.fb:hover
         fill: #3b5998
   .phone
-    position: relative
-    padding-left: 40px
-    line-height: 24px
+    position: absolute
+    right: 20px
     a
       color: color-font--lighten
       text-decoration: none
       &:hover
         color: color-font--light
     .whatsapp
-      padding-left: 10px
-      svg
-        width: 16px
-        height: 16px
-        fill: color-orange
-      &:hover svg
-        fill: color-whatsapp
     .viber
+    .telegram
       padding-left: 10px
+      font-size: 0
       svg
         width: 16px
         height: 16px
         fill: color-orange
-      &:hover svg
-        fill: color-viber
+        transform: translateY(1px)
+    .whatsapp:hover svg
+      fill: color-whatsapp
+    .viber:hover svg
+      fill: color-viber
     .telegram
       top: 3px
       padding-left: 8px
       svg
         width: 20px
         height: 20px
-        transform: translateY(2px);
-        fill: color-orange
+        transform: translate(-2px, 3px)
       &:hover svg
         fill: color-telegram
     .image
-      position: absolute
-      left: 20px
-      top: 2px
       width: 16px
+      transform: translateY(6px);
       fill-opacity: .85
       fill: color-orange
 
-      &--viber
-        top: 0
-        left: 10px
-      &--whatsapp
-        top: 0
-        left: 20px
-      &--telegram
-        top: 0
-        left: 30px
-      &--whatsapp:hover
-        fill: color-whatsapp
-      &--viber:hover
-        fill: color-viber
-      &--telegram:hover
-        fill: color-telegram
+      //&--viber
+      //  top: 0
+      //  left: 10px
+      //&--whatsapp
+      //  top: 0
+      //  left: 20px
+      //&--telegram
+      //  top: 0
+      //  left: 30px
+      //&--whatsapp:hover
+      //  fill: color-whatsapp
+      //&--viber:hover
+      //  fill: color-viber
+      //&--telegram:hover
+      //  fill: color-telegram
 
   @media only screen and (max-width: 1000px)
     .location
@@ -194,6 +188,8 @@
 
   @media only screen and (max-width: 780px)
     max-height: 50px
+    .phone
+      right: 60px
     .top
       box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.16)
     .menuRight.opened

@@ -31,7 +31,7 @@ export default class Unlimited extends React.Component {
             this.$name.value = '';
             this.$phone.value = '';
             alert('Вы успешно записались на акцию "Безлимитная неделя". В скором времени мы с Вами свяжемся для подтверждения участия!');
-            this.$recaptcha.reset();
+            // this.$recaptcha.reset();
         });
     };
 
@@ -43,7 +43,7 @@ export default class Unlimited extends React.Component {
 
     handleChange = ({ name, value }) => this.setState({ [name.slice(3)]: value });
 
-    handleRecaptcha = recaptcha => this.setState({ recaptcha });
+    // handleRecaptcha = recaptcha => this.setState({ recaptcha });
 
     render() {
         const { className } = this.props;
@@ -74,12 +74,11 @@ export default class Unlimited extends React.Component {
                         onChange={this.handleChange}
                         onKeyDown={this.handleKeyDown}
                     />
-                    <ReCAPTCHA
-                        ref={r => this.$recaptcha = r}
-                        sitekey="6Le49wYTAAAAAOF2yXK91DOjY9RHcPLHwOYRtyjj"
-                        onChange={this.handleRecaptcha}
-                    />
-                    {/* <InputMask ref={r => this.$phone = r} type="text" name="phone" title="Телефон" placeholder="Телефон" onChange={this.handleChange} mask="+4\9 99 999 99" maskChar=" " />; */}
+                    {/*<ReCAPTCHA*/}
+                        {/*ref={r => this.$recaptcha = r}*/}
+                        {/*sitekey="6Le49wYTAAAAAOF2yXK91DOjY9RHcPLHwOYRtyjj"*/}
+                        {/*onChange={this.handleRecaptcha}*/}
+                    {/*/>*/}
                     <Button
                         type="submit"
                         name="submit"
