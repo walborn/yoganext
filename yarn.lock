@@ -3919,6 +3919,11 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
+next-seo@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-1.12.0.tgz#6e33db2abdf1ca7b97c8c275bc468ea19863bcfd"
+  integrity sha512-8w4aMsynRnOf/0q3pzTgFKLfR/jJLlsWQa0AZP0Gsqkwla2w2XVAyuP4wSs5y1vvYSRM6/D5zTWiQpFYJilKsA==
+
 next-server@8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/next-server/-/next-server-8.1.0.tgz#50a9f248ede69fb33d83aa5274ec6c66f421556e"

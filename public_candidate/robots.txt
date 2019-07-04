@@ -1,0 +1,11 @@
+User-agent: Yandex
+Disallow:
+Host: https://smartvote.me/
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: *
+Disallow:
+
+Sitemap: https://smartvote.me/sitemap.xml

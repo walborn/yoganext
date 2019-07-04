@@ -7,10 +7,12 @@ const defaultOGURL = '';
 const defaultOGTitle = 'OM Yoga Club';
 const defaultOGImage = '/static/favicon.png';
 
+
 const Head = props => (
     <NextHead>
         <meta charSet="UTF-8" />
         <title>{props.title || ''}</title>
+        <meta name="keywords" content={props.keywords} />
         <meta
             name="description"
             content={props.description || defaultDescription}
@@ -37,6 +39,11 @@ Head.propTypes = {
     description: PropTypes.string,
     url: PropTypes.string,
     ogImage: PropTypes.string,
+    keywords: PropTypes.string,
+};
+
+Head.defaultProps = {
+    keywords: '',
 };
 
 export default Head;
