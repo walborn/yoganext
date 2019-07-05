@@ -7,7 +7,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const port = process.env. PORT || 4096;
 const url = dev
     ? `http://localhost:${port}`
-    : 'https://yoganext.walborn.now.sh';
+    : 'https://yoga-club-om.ru';
 
 const index = next({ dev });
 const handle = index.getRequestHandler();
