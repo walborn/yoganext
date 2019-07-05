@@ -1,0 +1,9 @@
+User-agent: Yandex
+Host: https://yoga-club-om.ru
+
+User-agent: Googlebot
+
+User-agent: *
+Allow: *
+
+Sitemap: https://yoga-club-om.ru/sitemap.xml
