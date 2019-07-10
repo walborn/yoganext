@@ -1,12 +1,30 @@
 @import '../../styles/constants.styl'
 
 .subscribe
+  position: relative
   display: block
   max-width: 500px
   width: 100%
   margin: 0 auto
   > *
     margin-bottom: 10px
+  .image
+    text-align: center
+    > img
+      max-width: 120px
+      width: 100%
+
+  @media only screen and (min-width: 400px)
+    padding-left: 120px
+    .image
+      position: absolute
+      top: 0
+      left: 0
+      width: 90px
+      > img
+        width: 100%
+
+
   .recaptcha
     text-align: center
     > div > div > div

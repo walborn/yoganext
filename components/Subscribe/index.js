@@ -44,6 +44,7 @@ export default class Subscribe extends React.Component {
         const { name, phone } = this.state;
         return (
             <div className={[ css.subscribe, className ].filter(Boolean).join(' ')}>
+                <div className={css.image}><img src="/static/girl.png" alt="" /></div>
                 <Input
                     ref={r => this.$name = r}
                     type="text"

@@ -1,4 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path
-        d="M18 10.031v-6.423l-6.036-3.608-5.964 3.569v6.499l-6 3.224v7.216l6.136 3.492 5.864-3.393 5.864 3.393 6.136-3.492v-7.177l-6-3.3zm-1.143.036l-4.321 2.384v-4.956l4.321-2.539v5.111zm-4.895-8.71l4.272 2.596-4.268 2.509-4.176-2.554 4.172-2.551zm-10.172 12.274l4.778-2.53 4.237 2.417-4.668 2.667-4.347-2.554zm4.917 3.587l4.722-2.697v5.056l-4.722 2.757v-5.116zm6.512-3.746l4.247-2.39 4.769 2.594-4.367 2.509-4.649-2.713zm9.638 6.323l-4.421 2.539v-5.116l4.421-2.538v5.115z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     style="isolation:isolate" viewBox="0 0 128 128" width="128pt" height="128pt">
+    <defs>
+        <clipPath id="_clipPath_TcIlFkBmMnATQUS83uNVgxKeul9c8gWX">
+            <rect width="128" height="128"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#_clipPath_TcIlFkBmMnATQUS83uNVgxKeul9c8gWX)">
+        <rect width="128" height="128" style="fill:rgb(0,0,0)" fill-opacity="0"/>
+        <g>
+            <path d=" M 40.717 62.235 C 41.093 57.623 38.76 56.859 37.875 60.338 C 36.989 63.817 38.318 79.312 50.018 84.625 C 61.719 89.937 69.055 78.426 68.613 74.379 C 68.17 70.331 68.165 71.1 67.284 67.358 Q 70.067 66.157 72.407 63.943 Q 72.028 70.71 70.889 74.758 C 69.751 78.806 70.826 80.324 74.115 81.589 C 77.404 82.854 81.325 81.779 85.689 76.086 C 90.053 70.394 88.346 63.69 87.587 58.441 C 86.828 53.191 74.558 52.559 72.787 57.709 C 71.016 62.86 67.664 64.955 65.387 63.943 C 63.11 62.931 64.312 63.437 61.402 61.856 C 62.794 60.085 65.321 53.796 61.289 49.902 C 57.257 46.008 49.268 46.522 47.172 47.246 C 45.076 47.97 46.086 53.12 48.121 53.318 C 50.156 53.515 48.82 52.432 54.192 52.938 C 59.565 53.444 59.252 60.085 53.433 61.287 C 47.615 62.488 50.271 67.928 52.295 68.117 C 54.319 68.307 56.366 64.361 60.074 68.739 C 63.782 73.116 63.49 77.351 54.572 79.122 C 45.654 80.893 40.341 66.847 40.717 62.235 Z  M 75.351 67.919 C 75.846 63.611 74.661 63.577 76.012 61.139 C 77.364 58.701 82.108 60.03 83.602 61.666 C 85.096 63.303 84.937 71.77 81.329 74.948 C 77.72 78.126 74.99 76.514 74.387 74.699 C 73.783 72.884 74.855 72.228 75.351 67.919 Z "
+                  fill-rule="evenodd" fill="rgb(250,164,38)"/>
+            <path d=" M 59.885 44.21 C 64.227 50.432 75.536 51.821 79.238 49.902 C 80.187 46.108 79.075 44.056 77.151 43.641 C 73.985 45.103 67.441 47.761 62.161 42.692 C 61.162 42.911 60.286 43.267 59.885 44.21 Z "
+                  fill="rgb(250,164,38)"/>
+            <path d=" M 71.269 37 C 69.846 37.332 69.31 37.951 68.233 38.708 C 66.525 40.099 67.427 41.933 70.7 43.261 C 72.834 43.356 73.614 42.365 74.305 40.795 C 74.969 39.514 73.925 37.806 71.269 37 Z "
+                  fill="rgb(250,164,38)"/>
+        </g>
+        <g>
+            <defs>
+                <filter id="2FhghJejcFfMsfAFHUcaT3ZXVm5iXMH2" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#2FhghJejcFfMsfAFHUcaT3ZXVm5iXMH2)">
+                <path d=" M 50 28 C 43.393 13.98 61.367 14.343 63.728 5 C 64.817 14.343 85.515 13.799 78 28" fill="none"
+                      vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="9xM4KIKGVwKAup8kOZcBBwNR0WH4zveP" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#9xM4KIKGVwKAup8kOZcBBwNR0WH4zveP)">
+                <path d=" M 29.379 48.218 C 14.794 42.976 27.761 30.523 22.823 22.247 C 30.2 28.084 44.45 13.063 49.178 28.419"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="JLk8fFPD0g0bVE1eZpxbpdF4kocoxLj8" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#JLk8fFPD0g0bVE1eZpxbpdF4kocoxLj8)">
+                <path d=" M 29.094 77.094 C 15.075 83.702 15.438 65.727 6.094 63.367 C 15.438 62.277 14.893 41.58 29.094 49.094"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="jRhVNlUJI9kTTtFc2zph4HgUfbFcnjLh" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#jRhVNlUJI9kTTtFc2zph4HgUfbFcnjLh)">
+                <path d=" M 49.312 97.715 C 44.07 112.3 31.617 99.334 23.342 104.271 C 29.178 96.895 14.157 82.644 29.513 77.916"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="ipsHMsd1oriCXpFlg1trOV3VUvYLmF9J" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#ipsHMsd1oriCXpFlg1trOV3VUvYLmF9J)">
+                <path d=" M 78.189 98 C 84.796 112.02 66.822 111.657 64.461 121 C 63.372 111.657 42.674 112.201 50.189 98"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="srrzgNnZXDXgpUnmLSMS2vL25RaODaIG" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#srrzgNnZXDXgpUnmLSMS2vL25RaODaIG)">
+                <path d=" M 98.81 77.782 C 113.395 83.024 100.428 95.477 105.366 103.753 C 97.989 97.916 83.739 112.937 79.011 97.581"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="wmClpvfr2LsgGbl6aBTs4RIASGO8FgsT" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#wmClpvfr2LsgGbl6aBTs4RIASGO8FgsT)">
+                <path d=" M 99.094 48.906 C 113.114 42.298 112.751 60.273 122.094 62.633 C 112.751 63.723 113.296 84.42 99.094 76.906"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+            <defs>
+                <filter id="AGR2bybEtyEchfmqgh0Vl5CVeNdmXuGE" x="-200%" y="-200%" width="400%" height="400%"
+                        filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                    <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+                </filter>
+            </defs>
+            <g filter="url(#AGR2bybEtyEchfmqgh0Vl5CVeNdmXuGE)">
+                <path d=" M 78.877 28.285 C 84.119 13.699 96.572 26.666 104.847 21.729 C 99.011 29.105 114.032 43.356 98.676 48.084"
+                      fill="none" vector-effect="non-scaling-stroke" stroke-width="5" stroke="rgb(250,164,38)"
+                      stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+            </g>
+        </g>
+        <defs>
+            <filter id="6Zx940XXKRMMd38wCddYPQ4OISzNtvh2" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#6Zx940XXKRMMd38wCddYPQ4OISzNtvh2)">
+            <path d=" M 63.483 25.8 C 62.423 27.391 63.395 26.949 60.483 29.983 C 61.804 28.098 63.347 24.418 63.483 19.983 C 64.238 24.85 65.248 29.54 66.483 29.983 C 63.395 26.772 64.456 27.567 63.483 25.8 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="cffH6CjbICNlz0L4Odvo9GiYx1gYw20K" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#cffH6CjbICNlz0L4Odvo9GiYx1gYw20K)">
+            <path d=" M 37.191 36.691 C 37.566 38.566 37.941 37.566 38.028 41.77 C 37.628 39.503 36.117 35.81 33.078 32.578 C 37.053 35.485 41.084 38.088 42.27 37.528 C 37.816 37.441 39.128 37.253 37.191 36.691 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="dQhRuXwjAt44AZ5G3yGaP62XgDxLm9EH" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#dQhRuXwjAt44AZ5G3yGaP62XgDxLm9EH)">
+            <path d=" M 26.3 62.983 C 27.891 64.044 27.449 63.072 30.483 65.983 C 28.598 64.663 24.918 63.12 20.483 62.983 C 25.35 62.229 30.04 61.219 30.483 59.983 C 27.272 63.072 28.067 62.011 26.3 62.983 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="TQrkZtZSD851PjGURxcDfeTru54Mnl8I" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#TQrkZtZSD851PjGURxcDfeTru54Mnl8I)">
+            <path d=" M 37.191 89.276 C 39.066 88.901 38.066 88.526 42.27 88.439 C 40.003 88.839 36.31 90.35 33.078 93.389 C 35.985 89.414 38.588 85.383 38.028 84.197 C 37.941 88.651 37.753 87.339 37.191 89.276 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="GfNRzz4zmBZJVlE08r5K4O7vkn5egCU1" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#GfNRzz4zmBZJVlE08r5K4O7vkn5egCU1)">
+            <path d=" M 63.483 100.167 C 62.423 98.576 63.395 99.018 60.483 95.983 C 61.804 97.869 63.347 101.549 63.483 105.983 C 64.238 101.117 65.248 96.427 66.483 95.983 C 63.395 99.195 64.456 98.399 63.483 100.167 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="dG8rVV7u8FC6NLMmdzbnsgBwesbEwa3l" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#dG8rVV7u8FC6NLMmdzbnsgBwesbEwa3l)">
+            <path d=" M 89.776 89.276 C 87.901 88.901 88.901 88.526 84.697 88.439 C 86.964 88.839 90.657 90.35 93.889 93.389 C 90.982 89.414 88.379 85.383 88.939 84.197 C 89.026 88.651 89.214 87.339 89.776 89.276 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="XZ03XXWUDN6O53rwfQIAbpA1XdFvGgqP" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#XZ03XXWUDN6O53rwfQIAbpA1XdFvGgqP)">
+            <path d=" M 100.667 62.983 C 99.076 64.044 99.518 63.072 96.483 65.983 C 98.369 64.663 102.049 63.12 106.483 62.983 C 101.617 62.229 96.927 61.219 96.483 59.983 C 99.695 63.072 98.899 62.011 100.667 62.983 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+        <defs>
+            <filter id="k9a3DppxL4Fr8clDgJGZiGRp2mKxSAdz" x="-200%" y="-200%" width="400%" height="400%"
+                    filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+                <feGaussianBlur xmlns="http://www.w3.org/2000/svg" stdDeviation="2.146804531419514"/>
+            </filter>
+        </defs>
+        <g filter="url(#k9a3DppxL4Fr8clDgJGZiGRp2mKxSAdz)">
+            <path d=" M 89.776 36.691 C 89.401 38.566 89.026 37.566 88.939 41.77 C 89.339 39.503 90.85 35.81 93.889 32.578 C 89.914 35.485 85.883 38.088 84.697 37.528 C 89.151 37.441 87.839 37.253 89.776 36.691 Z "
+                  fill="rgb(250,164,38)" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(250,164,38)"
+                  stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+        </g>
+    </g>
 </svg>
