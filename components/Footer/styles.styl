@@ -10,11 +10,14 @@ footer
 .logo
   position: relative
   display: inline-block
-  width: 128px
-  height: 128px
+  height: 100%
+  max-width: 128px
+  max-height: 128px
   vertical-align: top
   img
-    width: 100%
+    height: 100%
+    max-width: 128px
+    max-height: 128px
 
 
 .social
@@ -130,6 +133,25 @@ footer
 
     .viber:hover
       fill: #8f5db7
+
+@media only screen and (min-width: 700px)
+  .logo
+  .social
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+  .social
+    padding: 0
+    margin: 0
+    left: 160px
+    > li svg
+      width: 32px
+      height: 32px
+@media only screen and (min-width: 1000px)
+  .contacts
+    max-width: 600px
+    float: right
+    column-count: 2
 
 @media only screen and (max-width: 700px)
   .logo
