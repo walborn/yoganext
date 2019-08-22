@@ -12,7 +12,6 @@ export default () => (
             индивидуальных и групповых занятий, а также тренингов по следующим направлениям:
             <div className={css.list}>
                 <div className={css.item}>Йога</div>
-                <div className={css.item}>Танцы</div>
                 <div className={css.item}>Фитнес</div>
             </div>
             <h2>Характеристики</h2>
