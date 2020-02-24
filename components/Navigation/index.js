@@ -100,6 +100,17 @@ class Index extends React.Component {
                         </Row>
                     </div>
                 </Headroom>
+                {
+                    active !== 'info' && (
+                        <div className={css.info}>
+                            <Row className={css.menuInfo}>
+                                <strong>Внимание! </strong>
+                                <span className={css.menuInfoDesktop}><strong>28</strong> февраля наш клуб переезжает на новое место! <Link href="info">Подробнее...</Link></span>
+                                <span className={css.menuInfoMobile}><strong>28</strong> февраля клуб <Link href="info">переезжает!</Link></span>
+                            </Row>
+                        </div>
+                    )
+                }
                 { opened && <div className={css.backdrop} onClick={() => this.handleToggleMenu(false)} />}
                 <Menu className={[ css.menuRight, opened && css.opened ].filter(Boolean).join(' ')} active={active} list={navigation}>
                     <CloseSVG className={css.close} onClick={() => this.handleToggleMenu(false)} />

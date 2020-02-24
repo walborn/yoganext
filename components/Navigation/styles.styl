@@ -20,6 +20,21 @@
     box-shadow: 0 0 2px 0 rgba(245, 166, 32, 0.3)
     line-height: 40px
 
+  .info
+    background: color-background
+    box-shadow: 0 0 2px 0 rgba(245, 166, 32, 0.3)
+    line-height: 30px
+    text-align: center
+    color: color-orange
+    white-space: nowrap
+    a
+      text-decoration: none
+      color: color-orange
+      font-weight: bold
+    &:hover
+      a
+        color: darken(color-orange, 10)
+
   .home
     display: inline-block
     cursor: pointer
@@ -68,6 +83,9 @@
       &.active
         color: color-orange
         font-weight: bold
+
+  .menuInfo > .menuInfoMobile
+    display: none
 
   .menuRight
     display: none
@@ -197,9 +215,17 @@
       display: block
       right: RIGHT_MENU_WIDTH
     .menuBottom
+    .menuInfo > .menuInfoDesktop
       display: none
+
     .sandwich
       display: block
+    .menuInfo > .menuInfoMobile
+      display: block
+    .info
+      background: color-menu
+
+
 
   @media only screen and (max-width: 500px)
     .social
@@ -213,7 +239,3 @@
       .viber
       .telegram
         padding-left: 5px
-
-
-
-

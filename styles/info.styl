@@ -1,0 +1,49 @@
+@import './constants.styl';
+
+.contacts {
+	padding-right: 0;
+
+	.map {
+		margin-bottom: 20px;
+		box-shadow: box-shadow;
+		border-radius: 6px;
+	}
+
+	.location {
+        position: relative;
+		margin: 10px 0;
+		padding: 20px 20px 20px 40px;
+		box-shadow: box-shadow;
+		border-radius: 6px;
+        svg {
+            position: absolute;
+            left: 10px;
+            fill: color-red
+        }
+        > a {
+            text-decoration: none
+            color: color-brown
+        }
+        &:hover {
+            color: darken(color-blue, 20);
+            > a {
+                color: color-brown--light;
+            }
+        }
+	}
+}
+
+.images {
+	img {
+		display: block;
+		margin: 20px auto;
+		max-width: 100%;
+	}
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: color-orange;
+}

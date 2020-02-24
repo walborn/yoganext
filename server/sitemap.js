@@ -51,6 +51,12 @@ const setup = ({ server }) => {
         priority: 1,
     });
 
+    sitemap.add({
+        url: '/info',
+        changefreq: 'daily',
+        priority: 1,
+    });
+
     server.get('/sitemap.xml', (req, res) => {
         sitemap.toXML((err, xml) => {
             if (err) {
