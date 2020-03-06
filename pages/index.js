@@ -58,11 +58,10 @@ export default () => {
                 </Section>
 
                 <Section><strong>СПЕЦИАЛЬНЫЕ НАПРАВЛЕНИЯ:</strong>
-                    <div className={css.item}>Восстановление после родов</div>
                     <div className={css.item}>Практика "Здоровая спина"</div>
                     <div className={css.item}>Общая физическая подготовка</div>
                 </Section>
-                <Section><strong>ЕДИНОБОРСТВА (ДЛЯ ДЕТЕЙ ОТ 5 ДО 16 ЛЕТ)</strong>
+                <Section><strong>ЕДИНОБОРСТВА (ДЛЯ ДЕТЕЙ ОТ 5 ДО 14 ЛЕТ И ВЗРОСЛЫХ ОТ 15 ДО 99)</strong>
                     <div className={css.item}>Джит Кун-до - стиль, основанный Брюсом Ли</div>
                 </Section>
 

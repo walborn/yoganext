@@ -64,8 +64,8 @@ class Index extends React.Component {
                             </div>
                             <div className={css.location}>
                                 <LocationSVG className={css.image} />
-                                <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
-                                    м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
+                                <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
+                                    м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                                 </a>
                             </div>
                             <div className={css.social}>
@@ -101,12 +101,16 @@ class Index extends React.Component {
                     </div>
                 </Headroom>
                 {
-                    active !== 'info' && (
+                    active !== 'info' && active !== 'contact' && (
                         <div className={css.info}>
                             <Row className={css.menuInfo}>
-                                <strong>Внимание! </strong>
-                                <span className={css.menuInfoDesktop}><strong>28</strong> февраля наш клуб переезжает на новое место! <Link href="info">Подробнее...</Link></span>
-                                <span className={css.menuInfoMobile}><strong>28</strong> февраля клуб <Link href="info">переезжает!</Link></span>
+                                <Link href="info">
+                                    <a>
+                                        <strong>Внимание! </strong>
+                                        <span className={css.menuInfoDesktop}>Со <strong>2 марта</strong> наш клуб находится по новому адресу ул. Шенкурский проезд, 3Б.</span>
+                                        <span className={css.menuInfoMobile}>Со <strong>2.03</strong> клуб по новому адресу!</span>
+                                    </a>
+                                </Link>
                             </Row>
                         </div>
                     )

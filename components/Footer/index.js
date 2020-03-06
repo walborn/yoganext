@@ -30,10 +30,10 @@ export default () => (
                     </a>
                 </li>
                 <li><LocationSVG className={css.location} />
-                    <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
-                        м. Бибирево, ул. Мурановская, д.5, 3 этаж, офис 305
+                    <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
+                        м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                     </a>
-                </li>
+                </li>   
                 <li>
                     <a href="tel:+79168765413"><PhoneSVG className={css.phone} />+7 (916) 876-54-13</a>
                     <a className={css.whatsapp} href="https://wa.me/79168765413"><WhatsAppSVG /></a>

@@ -2,16 +2,7 @@ import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 import Layout from '../components/Layout/index';
 import LocationSVG from '../static/svg/location.svg';
-import PhoneSVG from '../static/svg/phone.svg';
-import WhatsAppSVG from '../static/svg/whatsapp.svg';
-import ViberSVG from '../static/svg/viber.svg';
-import EmailSVG from '../static/svg/email.svg';
-import VkSVG from '../static/svg/social/vk.svg';
-import InstaSVG from '../static/svg/social/insta.svg';
-import FbSVG from '../static/svg/social/fb.svg';
-import FileSVG from '../static/svg/file.svg';
 import css from '../styles/info.styl';
-import TelegramSVG from '../static/svg/telegram.svg';
 
 
 export default class Contacts extends React.PureComponent {
@@ -22,10 +13,9 @@ export default class Contacts extends React.PureComponent {
     render() {
         return (
             <Layout>
-                <h2 style={{ marginTop: -35 }}>Мы переезжаем!</h2>
+                <h2 style={{ marginTop: -35 }}>Мы переехали!</h2>
                 <p className={css.subtitle}>
-                    <div>С <b>28 февраля</b> мы переезжаем на новое место!</div>
-                    <div>Занятия возобновятся со <b>2 марта</b> по новому адресу.</div>
+                    <div>Занятия начнутся <b>2 марта</b>.</div>
                 </p>
                 <div className={css.contacts}>
                     <div className={css.location}>
@@ -60,9 +50,10 @@ export default class Contacts extends React.PureComponent {
                     </div>
                 </div>
                 <h2>Как нас найти?</h2>
+                <p>Это Бизнес-центр. При входе на охране надо предъявлять <strong>ПАСПОРТ</strong> или водительское удостоверение!!!</p>
                 <div className={css.images}>
                     <img src="/static/images/relocation/0.jpg" />
-                    <p>Это Бизнес-центр. При входе на охране надо предъявлять паспорт или водительское удостоверение!!!</p>
+                    
                     <img src="/static/images/relocation/1.jpg" />
                     <p>На 3 этаже лифт не останавливается. Поэтому можно доехать на 4 этаж и спуститься по лестнице на 3 этаж, или просто по лестнице подняться на 3 этаж.</p>
                     <img src="/static/images/relocation/2.jpg" />

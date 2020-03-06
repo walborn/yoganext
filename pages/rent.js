@@ -16,14 +16,18 @@ export default () => (
             </div>
             <h2>Характеристики</h2>
             <div>
-                <div className={css.item}>Площадь залов: 40 и 50 м2</div>
-                <div className={css.item}>Высота потолков: 4 м</div>
-                <div className={css.item}>Зеркала на стенах</div>
+                <div className={css.item}>Площадь залов: 70 и 15 м2</div>
+                <div className={css.item}>Высота потолков: 3 м</div>
                 <div className={css.item}>Напольное покрытие: линолеум</div>
                 <div className={css.item}>Раздевалки (женская, мужская)</div>
                 <div className={css.item}>Спортинвентарь: коврики, блоки, ремни для йоги</div>
             </div>
             <div className={css.thesis}>Цена:</div> от 500 руб./час
+        </div>
+    </Layout>
+);
+
+/*
             <div className={css.images}>
                 <Slider
                     list={[
@@ -38,7 +42,4 @@ export default () => (
             <div className={css.images}>
                 <img src="/static/images/gallery/Plan_OM.jpg" />
             </div>
-        </div>
-    </Layout>
-);
-
+*/

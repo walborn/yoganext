@@ -22,14 +22,14 @@ export default class Contacts extends React.PureComponent {
     render() {
         return (
             <Layout>
-                <h1>Как нас найти?</h1>
+                <h1>Контакты</h1>
 
                 <div className={css.contacts}>
                     <ul className={css.list}>
                         <li className={css.item}>
                             <LocationSVG className={css.location} />
-                            <a target="_blank" href="https://yandex.ru/maps/-/CCu~UZy6">
-                                м.&nbsp;Бибирево, ул.&nbsp;Мурановская,&nbsp;д.5, 3&nbsp;этаж, офис&nbsp;305
+                            <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
+                                м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                             </a>
                         </li>
                         <li className={css.item}>
@@ -78,13 +78,13 @@ export default class Contacts extends React.PureComponent {
                             <Map
                                 width="100%"
                                 height="350px"
-                                state={{ center: [ 55.891, 37.596669 ], zoom: 14 }}
+                                state={{ center: [ 55.8943, 37.59 ], zoom: 15 }}
                             >
                                 <Placemark
-                                    geometry={[ 55.890951, 37.596669 ]}
+                                    geometry={[ 55.891426, 37.590075 ]}
                                     properties={{
-                                        hintContent: 'Собственный значок метки',
-                                        balloonContent: 'Это красивая метка',
+                                        hintContent: 'Расположение клуба ОМ',
+                                        balloonContent: 'Йога клуб ОМ',
                                     }}
                                     options={{
                                         iconLayout: 'default#image',
@@ -96,6 +96,23 @@ export default class Contacts extends React.PureComponent {
                             </Map>
                         </YMaps>
                     </div>
+                </div>
+
+                <h1>Как нас найти?</h1>
+
+                <p>Это Бизнес-центр. При входе на охране надо предъявлять <strong>ПАСПОРТ</strong> или водительское удостоверение!!!</p>
+                <div className={css.images}>
+                    <img src="/static/images/relocation/0.jpg" />
+                    <img src="/static/images/relocation/1.jpg" />
+                    <p>На 3 этаже лифт не останавливается. Поэтому можно доехать на 4 этаж и спуститься по лестнице на 3 этаж, или просто по лестнице подняться на 3 этаж.</p>
+                    <img src="/static/images/relocation/2.jpg" />
+                    <img src="/static/images/relocation/3.jpg" />
+
+                    <h2>Внимание!</h2>
+
+                    <p style={{ textAlign: 'center' }}>Расписание со <b>2 марта</b> немного изменится! На сайте информация по расписанию актуальная.</p>
+
+                    <h2>Встречаемся на ковриках!!!</h2>
                 </div>
             </Layout>
         );
