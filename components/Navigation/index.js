@@ -65,7 +65,7 @@ class Index extends React.Component {
                             <div className={css.location}>
                                 <LocationSVG className={css.image} />
                                 <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
-                                    м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
+                                    м.&nbsp;Алтуфьево, Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                                 </a>
                             </div>
                             <div className={css.social}>
@@ -100,21 +100,6 @@ class Index extends React.Component {
                         </Row>
                     </div>
                 </Headroom>
-                {
-                    active !== 'info' && active !== 'contact' && (
-                        <div className={css.info}>
-                            <Row className={css.menuInfo}>
-                                <Link href="info">
-                                    <a>
-                                        <strong>Внимание! </strong>
-                                        <span className={css.menuInfoDesktop}>Со <strong>2 марта</strong> наш клуб находится по новому адресу ул. Шенкурский проезд, 3Б.</span>
-                                        <span className={css.menuInfoMobile}>Со <strong>2.03</strong> клуб по новому адресу!</span>
-                                    </a>
-                                </Link>
-                            </Row>
-                        </div>
-                    )
-                }
                 { opened && <div className={css.backdrop} onClick={() => this.handleToggleMenu(false)} />}
                 <Menu className={[ css.menuRight, opened && css.opened ].filter(Boolean).join(' ')} active={active} list={navigation}>
                     <CloseSVG className={css.close} onClick={() => this.handleToggleMenu(false)} />

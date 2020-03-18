@@ -21,7 +21,7 @@ export default class Contacts extends React.PureComponent {
                     <div className={css.location}>
                         <LocationSVG />
                         <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
-                            м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
+                            м.&nbsp;Алтуфьево, Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                         </a>
                     </div>
 
@@ -53,16 +53,10 @@ export default class Contacts extends React.PureComponent {
                 <p>Это Бизнес-центр. При входе на охране надо предъявлять <strong>ПАСПОРТ</strong> или водительское удостоверение!!!</p>
                 <div className={css.images}>
                     <img src="/static/images/relocation/0.jpg" />
-                    
                     <img src="/static/images/relocation/1.jpg" />
                     <p>На 3 этаже лифт не останавливается. Поэтому можно доехать на 4 этаж и спуститься по лестнице на 3 этаж, или просто по лестнице подняться на 3 этаж.</p>
                     <img src="/static/images/relocation/2.jpg" />
                     <img src="/static/images/relocation/3.jpg" />
-
-                    <h2>Внимание!</h2>
-
-                    <p style={{ textAlign: 'center' }}>Расписание со <b>2 марта</b> немного изменится! На сайте информация по расписанию актуальная.</p>
-
                     <h2>Встречаемся на ковриках!!!</h2>
                 </div>
 

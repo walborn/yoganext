@@ -31,7 +31,7 @@ export default () => (
                 </li>
                 <li><LocationSVG className={css.location} />
                     <a target="_blank" href="https://yandex.ru/maps/-/CKaVm-ZC">
-                        м.&nbsp;Алтуфьево, ул.&nbsp;Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
+                        м.&nbsp;Алтуфьево, Шенкурский&nbsp;проезд,&nbsp;д.3Б, 3&nbsp;этаж, офис&nbsp;308
                     </a>
                 </li>   
                 <li>

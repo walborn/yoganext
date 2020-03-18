@@ -36,22 +36,22 @@ export default () => (
             <h2 className={css.header}>Стоимость индивидуальных занятий</h2>
             <section className={css.content}>
                 <div className={css.card}>
-                    <div className={css.amount}>2000 рублей</div> - разовое занятие (1 час).
+                    <div className={css.amount}>2000 рублей</div> - разовое занятие (<b>1</b> час).
                 </div>
                 <div className={css.card}>
-                    <div className={css.amount}>2500 рублей</div> – разовое занятие (1,5 часа).
+                    <div className={css.amount}>2500 рублей</div> – разовое занятие (<b>1.5</b> часа).
                 </div>
                 <div className={css.card}>
-                    <div className={css.amount}>7000 рублей</div> - абонемент на 4 занятия (по 1 часу) в течение 1-го месяца.
+                    <div className={css.amount}>7000 рублей</div> - абонемент на <b>4</b> занятия (по <b>1</b> часу) в течение 1-го месяца.
+                </div>
+                <div className={css.card}>
+                    <div className={css.amount}>9000 рублей</div> - абонемент на <b>4</b> занятия (по <b>1.5</b> часа) в течение 1-го месяца.
                 </div>
             </section>
             <h2 className={css.header}>Способы оплаты</h2>
             <section className={css.content}>
                 <div className={css.card}>
-                    <div className={css.amount}>Наличный расчёт</div>
-                </div>
-                <div className={css.card}>
-                    <div className={css.amount}>Банковской картой</div> -&nbsp;у&nbsp;администратора на стойке регистрации
+                    <div className={css.amount}>Наличный расчёт</div> &nbsp;у&nbsp;администратора на стойке регистрации
                 </div>
             </section>
             <section className={css.info}>
